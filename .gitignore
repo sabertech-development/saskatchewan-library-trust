@@ -1,0 +1,8 @@
+/target/
+/dist/
+/.ucm/
+/policy/*.output.md
+/studio.exe
+*.log
+/policy/*.u
+!/policy/distribution.u

@@ -1,0 +1,41 @@
+-- Independent, executable Unison specification of the proposed cash policy.
+-- Currency values are CAD; rates are fractions. This validates the specified
+-- base and stress results independently of the interactive Rust engine.
+use Float + - *
+
+positive : Float -> Float
+positive x = if Float.gt x 0.0 then x else 0.0
+
+lesser : Float -> Float -> Float
+lesser a b = if Float.lt a b then a else b
+
+cashPolicy : Float -> Float -> Float -> Float -> Float -> Float -> Float -> [Float]
+cashPolicy capital reserve yield management administration tax target =
+  invested = capital - reserve
+  received = invested * yield
+  fees = invested * management
+  beforeTax = received - fees - administration
+  provision = positive beforeTax * tax
+  afterTax = beforeTax - provision
+  deficit = positive (0.0 - afterTax)
+  draw = lesser reserve deficit
+  unfunded = deficit - draw
+  afterDeficit = reserve - draw
+  topup = lesser (positive afterTax) (positive (target - afterDeficit))
+  residual = positive (afterTax - topup)
+  [residual * 0.5, residual * 0.2, residual * 0.3, afterDeficit + topup, draw, unfunded]
+
+baseResult = cashPolicy 250000000.0 5000000.0 0.08 0.015 500000.0 0.2 10000000.0
+lowerResult = cashPolicy 250000000.0 5000000.0 0.04 0.015 500000.0 0.2 10000000.0
+zeroResult = cashPolicy 250000000.0 5000000.0 0.0 0.015 500000.0 0.2 10000000.0
+deficitResult = cashPolicy 250000000.0 500000.0 0.0 0.015 500000.0 0.2 10000000.0
+
+> baseResult
+> lowerResult
+> zeroResult
+> deficitResult
+
+test> basePolicy = if baseResult == [3670000.0, 1468000.0, 2202000.0, 10000000.0, 0.0, 0.0] then [Ok "Base cash waterfall"] else [Fail "Base cash waterfall mismatch"]
+test> lowerPolicy = if lowerResult == [0.0, 0.0, 0.0, 9500000.0, 0.0, 0.0] then [Ok "Lower yield retains all positive cash"] else [Fail "Lower yield mismatch"]
+test> zeroPolicy = if zeroResult == [0.0, 0.0, 0.0, 825000.0, 4175000.0, 0.0] then [Ok "Zero income draws reserve for costs only"] else [Fail "Zero income mismatch"]
+test> deficitPolicy = if deficitResult == [0.0, 0.0, 0.0, 0.0, 500000.0, 3742500.0] then [Ok "Unfunded operating deficit remains visible"] else [Fail "Unfunded deficit mismatch"]
