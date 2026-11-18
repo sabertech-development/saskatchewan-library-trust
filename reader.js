@@ -1,5 +1,5 @@
 
-import init, {project_scenario, scenario_inputs} from './pkg/saskatchewan_library_funding.js';
+import init, {project_scenario, scenario_inputs, report_scenario} from './pkg/saskatchewan_library_funding.js';
 const form=document.getElementById('scenario-form');
 const percent=new Set(['interest_rate','library_interest_share','return_rate','investment_cost_rate','inflation','spending_rate','reserve_rate','first_year_return']);
 const money=new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
@@ -17,5 +17,6 @@ form.addEventListener('submit',event=>{event.preventDefault();calculate();});
 form.addEventListener('input',()=>{document.getElementById('result-status').textContent='Inputs changed. Calculate again to update results.';latest=null;});
 document.getElementById('reset').addEventListener('click',()=>{putInputs(JSON.parse(scenario_inputs(0)));document.getElementById('preset').value='0';calculate();});
 document.getElementById('preset').addEventListener('change',event=>{putInputs(JSON.parse(scenario_inputs(Number(event.target.value))));calculate();});
+document.getElementById('download-pdf').addEventListener('click',async()=>{if(!latest){document.getElementById('error').textContent='Calculate the changed inputs before downloading.';return;}const button=document.getElementById('download-pdf');button.disabled=true;try{if(typeof window.downloadTrustReport!=='function')throw Error('The PDF tools are still loading. Please try again.');await window.downloadTrustReport(report_scenario(JSON.stringify(latest.inputs)));}catch(error){document.getElementById('error').textContent=String(error);}finally{button.disabled=false;}});
 document.getElementById('download').addEventListener('click',()=>{if(!latest){document.getElementById('error').textContent='Calculate the changed inputs before downloading.';return;}const blob=new Blob([JSON.stringify(latest,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='library-trust-scenario.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 try{await init();document.getElementById('engine-status').textContent='Local calculation engine ready. All inputs are hypothetical.';document.getElementById('preset').disabled=false;document.getElementById('calculate').disabled=false;document.getElementById('reset').disabled=false;calculate();}catch(error){document.getElementById('engine-status').textContent='The calculation engine could not load. The narrative and plain-text review remain available.';document.getElementById('error').textContent=String(error);}

@@ -92,5 +92,5 @@ globalNav.querySelector('a[href="#spending"]').textContent='Funding';globalNav.q
 const screens=[...main.querySelectorAll(':scope>.screen')];
 function show(){let id=location.hash.slice(1)||'purpose';if(!screens.some(s=>s.id===id))id='purpose';screens.forEach(s=>s.hidden=s.id!==id);for(const a of globalNav.querySelectorAll('a')){const selected=a.hash==='#'+id||(a.hash==='#spending'&&['scenario','accountability'].includes(id));if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');}document.title=(section(id).querySelector('h1')?.textContent||'Library Trust')+' — Saskatchewan Library Sustainability Trust';main.scrollTop=0;}
 window.addEventListener('hashchange',show);document.body.classList.add('review-app');show();
-document.querySelector('footer').innerHTML='<span>PROPOSED LIBRARY SUSTAINABILITY TRUST · NO DONATIONS COLLECTED</span><span><a href="review.txt">Download complete review</a> · <a href="index.html#/overview">Visual demo</a></span>';
+document.querySelector('footer').innerHTML='<span>PROPOSED LIBRARY SUSTAINABILITY TRUST · NO DONATIONS COLLECTED</span><span><a href="library-trust-review.pdf" download>Default review PDF</a> · <a href="index.html#/overview">Visual demo</a></span>';
 })();
