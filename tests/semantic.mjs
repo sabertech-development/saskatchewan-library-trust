@@ -3,7 +3,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {JSDOM} from '../target/semantic-tests/node_modules/jsdom/lib/api.js';
-import init, {project_scenario, scenario_inputs} from '../dist/pkg/saskatchewan_library_funding.js';
+import init, {project_scenario, scenario_inputs, report_scenario} from '../dist/pkg/saskatchewan_library_funding.js';
 const bytes=await readFile(new URL('../dist/pkg/saskatchewan_library_funding_bg.wasm',import.meta.url));
 await init({module_or_path:bytes});
 const html=await readFile(new URL('../dist/reader.html',import.meta.url),'utf8');
@@ -34,7 +34,7 @@ for(const id of ['purpose','donations','spending','accountability','fairness','o
   assert.ok(document.querySelector('.screen:not([hidden]) h1'));
 }
 const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
-await new AsyncFunction('document','FormData','init','project_scenario','scenario_inputs',script)(document,FormData,async()=>{},project_scenario,scenario_inputs);
+await new AsyncFunction('document','FormData','init','project_scenario','scenario_inputs','report_scenario','window',script)(document,FormData,async()=>{},project_scenario,scenario_inputs,report_scenario,dom.window);
 assert.equal(document.getElementById('results').hidden,false);
 assert.equal(document.querySelectorAll('#table-body tr').length,20);
 assert.match(document.getElementById('result-status').textContent,/Proposed interest-sharing/);
@@ -51,3 +51,11 @@ document.getElementById('preset').value='3';document.getElementById('preset').di
 document.getElementById('reset').click();assert.equal(form.elements.namedItem('capital').value,'250000000');assert.equal(form.elements.namedItem('library_interest_share').value,'50');
 set('interest_only','false');set('protect_principal','false');calculate();assert.match(document.getElementById('result-status').textContent,/Capital-spending comparison only/);
 console.log('Semantic form and real WebAssembly engine: initial calculation, labels, custom values, separate pools, stress preset, reset and comparison passed.');
+
+let capturedPdf=null;dom.window.downloadTrustReport=async value=>{capturedPdf=JSON.parse(value);return true;};
+set('capital',12345678);set('years',7);calculate();document.getElementById('download-pdf').click();
+await new Promise(resolve=>setTimeout(resolve,0));assert.equal(capturedPdf.inputs.capital,12345678);assert.equal(capturedPdf.projection.years.length,7);
+assert.equal(capturedPdf.inputs.interest_only,false);assert.equal(capturedPdf.comparisons.length,5);
+capturedPdf=null;form.dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('download-pdf').click();
+assert.equal(capturedPdf,null);assert.match(document.getElementById('error').textContent,/Calculate the changed inputs/);
+console.log('PDF button uses selected values, preserves comparison policy, and blocks stale results.');

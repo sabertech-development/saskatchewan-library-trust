@@ -36,7 +36,7 @@ library participation or a fundraising service. No donation collection is enable
 
 ## Run locally
 
-Prerequisites: Rust with `wasm32-unknown-unknown`, `wasm-pack`, and Go.
+Prerequisites: Rust with `wasm32-unknown-unknown`, `wasm-pack`, Go, and Node.js.
 
 ```powershell
 rustup target add wasm32-unknown-unknown
@@ -50,6 +50,7 @@ No model inputs are transmitted, stored in URLs or persisted between visits.
 
 - Visual presentation: `index.html#/overview`
 - Semantic HTML reading and calculator: `reader.html`
+- Designed default review PDF: `library-trust-review.pdf`
 - Plain-text default review and complete ledger: `review.txt`
 - Optional native visual preview: `cargo run --bin library-funding`
 
@@ -151,3 +152,37 @@ The evidence view links the [Saskatchewan library system overview](https://www.s
 [CRA guidance before giving](https://www.canada.ca/en/revenue-agency/services/charities-giving/giving-charity-information-donors/before-you-give.html),
 and [BC Securities Commission information on mutual funds](https://www.investright.org/understand-investing/types-of-investments/common-investments/mutual-funds/).
 These sources establish context only; they do not endorse or verify the proposed fund.
+
+## Designed review PDF
+
+The review download renders the selected, validated scenario locally. Black pages,
+Space Grotesk type, cyan charts and the Saber Tech Inc. header are shared by the
+canvas and semantic HTML exports. The default 20-year report is nine pages; the
+annual ledger paginates for longer horizons. Static default PDF and plain-text
+review downloads remain available. No scenario values leave the device.
+
+`src/report.rs` supplies inputs, projections and stress comparisons from the shared
+Rust engine. The PDF layer formats that data without recalculating finances.
+`assets/report-template.pdf` is the ReportLab vector master; the checked-in local
+runtime bundles pdf-lib and fontkit, with licenses alongside it. Ordinary builds
+need Node.js, but no npm download or Python installation.
+
+To edit the PDF design and regenerate its assets:
+
+```powershell
+python scripts/create_report_template.py  # Requires reportlab
+npm ci
+npm run build:report
+go run ./cmd/studio build
+node tests/report.mjs
+node tests/semantic.mjs
+```
+
+Render the resulting PDF with Poppler and inspect every page after layout changes.
+The report is selectable text and vector graphics; it is not a tagged PDF/UA
+document. The semantic HTML and plain-text review provide accessible alternatives.
+
+The visual loader presents immediate HTML content while WebAssembly starts, awaits
+renderer startup, and routes failures or a 25-second timeout to the semantic
+proposal. The accessible view keeps its narrative available if graphics or the
+calculation engine cannot start. Verify this path with `node tests/loader.mjs`.

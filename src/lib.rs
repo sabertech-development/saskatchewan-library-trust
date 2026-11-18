@@ -3,6 +3,13 @@ pub mod app;
 pub mod content;
 pub mod finance;
 pub mod reader;
+pub mod report;
+
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen]
+pub fn report_scenario(input: &str) -> Result<String, JsValue> {
+    report::from_json(input).map_err(|e| JsValue::from_str(&e))
+}
 
 pub fn project_json(input: &str) -> Result<String, String> {
     let inputs: finance::Inputs =
@@ -29,31 +36,28 @@ use wasm_bindgen::prelude::*;
 #[wasm_bindgen(start)]
 pub fn start() {
     console_error_panic_hook::set_once();
-    // The semantic HTML companion uses the same engine without creating a canvas.
-    if web_sys::window()
+}
+
+// Return the renderer's startup promise to the loader so errors reach the UI.
+// The semantic reader initializes only the calculation engine.
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen]
+pub async fn start_visual() -> Result<(), JsValue> {
+    let document = web_sys::window()
         .and_then(|w| w.document())
-        .and_then(|d| d.get_element_by_id("proposal"))
-        .is_none()
-    {
-        return;
-    }
-    wasm_bindgen_futures::spawn_local(async {
-        let window = web_sys::window().expect("browser window");
-        let document = window.document().expect("browser document");
-        let canvas = document
-            .get_element_by_id("proposal")
-            .expect("generated canvas")
-            .dyn_into::<web_sys::HtmlCanvasElement>()
-            .expect("canvas element");
-        let runner = eframe::WebRunner::new();
-        runner
-            .start(
-                canvas,
-                eframe::WebOptions::default(),
-                Box::new(|cc| Ok(Box::new(app::ProposalApp::new(cc)))),
-            )
-            .await
-            .expect("start presentation");
-        std::mem::forget(runner);
-    });
+        .ok_or_else(|| JsValue::from_str("Browser document unavailable"))?;
+    let canvas = document
+        .get_element_by_id("proposal")
+        .ok_or_else(|| JsValue::from_str("Presentation canvas unavailable"))?
+        .dyn_into::<web_sys::HtmlCanvasElement>()?;
+    let runner = eframe::WebRunner::new();
+    runner
+        .start(
+            canvas,
+            eframe::WebOptions::default(),
+            Box::new(|cc| Ok(Box::new(app::ProposalApp::new(cc)))),
+        )
+        .await?;
+    std::mem::forget(runner);
+    Ok(())
 }

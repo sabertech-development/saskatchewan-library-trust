@@ -541,15 +541,15 @@ impl ProposalApp {
                 _ => {
                     section(ui, "Ready for discussion, not a fundraising launch.");
                     paragraph(ui, QUALIFICATION);
-                    if let Ok(p) = finance::calculate(&self.inputs) {
-                        if primary(ui, "Download review brief") {
-                            super::views::download(
-                                "saskatchewan-library-trust-review.txt",
-                                "text/plain;charset=utf-8",
-                                &self.review_text(&p),
-                            );
+                    if primary(ui, "Download review PDF") {
+                        if let Err(error) = super::views::download_pdf(&self.inputs) {
+                            self.toast = error;
                         }
                     }
+                    small(
+                        ui,
+                        "Prepared by Saber Tech Inc. · Charts use your selected hypothetical scenario.",
+                    );
                     if ui.button("Accessible reading & scenarios").clicked() {
                         open_reader();
                     }

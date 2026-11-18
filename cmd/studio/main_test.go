@@ -18,7 +18,7 @@ func TestGeneratedLoader(t *testing.T) {
 		t.Fatal(e)
 	}
 	s := string(b)
-	for _, v := range []string{title, "proposal", "type=\"module\"", "./pkg/saskatchewan_library_funding.js"} {
+	for _, v := range []string{title, "proposal", "type=\"module\"", "site-loader.js", "loading-status", "library-trust-review.pdf"} {
 		if !strings.Contains(s, v) {
 			t.Fatalf("Missing %s", v)
 		}

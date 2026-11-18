@@ -1,0 +1,12 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {dirname,resolve} from 'node:path';
+import {createReviewPdf} from '../assets/report-runtime.mjs';
+const input=process.argv[2]||'dist/report-data.json';
+const output=process.argv[3]||'dist/library-trust-review.pdf';
+let raw='';
+if(input==='-'){for await(const chunk of process.stdin)raw+=chunk;}else raw=await readFile(input,'utf8');
+const resource=path=>readFile(new URL('../'+path,import.meta.url));
+const [template,regular,medium]=await Promise.all([resource('assets/report-template.pdf'),resource('assets/fonts/SpaceGrotesk.ttf'),resource('assets/fonts/SpaceGrotesk-Medium.ttf')]);
+const bytes=await createReviewPdf(JSON.parse(raw),{template,regular,medium});
+await mkdir(dirname(resolve(output)),{recursive:true});await writeFile(output,bytes);
+console.log('Review PDF exported: '+output+' ('+bytes.length+' bytes)');

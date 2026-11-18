@@ -3,6 +3,10 @@
 /.ucm/
 /policy/*.output.md
 /studio.exe
+/node_modules/
+/output/
+/tmp/
+/library-trust-review.pdf
 *.log
 /policy/*.u
 !/policy/distribution.u

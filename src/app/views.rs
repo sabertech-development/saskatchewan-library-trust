@@ -1,5 +1,43 @@
 use super::*;
 
+pub(super) fn download_pdf(inputs: &Inputs) -> Result<(), String> {
+    let payload = crate::report::data(inputs)?;
+    #[cfg(target_arch = "wasm32")]
+    {
+        use wasm_bindgen::{JsCast, JsValue};
+        let window = web_sys::window().ok_or("Browser window is unavailable.")?;
+        let function = js_sys::Reflect::get(&window, &JsValue::from_str("downloadTrustReport"))
+            .map_err(|_| "The PDF download could not start.")?
+            .dyn_into::<js_sys::Function>()
+            .map_err(|_| "The PDF tools are still loading. Please try again.")?;
+        function
+            .call1(&window, &JsValue::from_str(&payload))
+            .map_err(|_| "The PDF download could not start.")?;
+    }
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        use std::{
+            io::Write,
+            process::{Command, Stdio},
+        };
+        let mut child = Command::new("node")
+            .args(["scripts/export_report.mjs", "-", "library-trust-review.pdf"])
+            .stdin(Stdio::piped())
+            .spawn()
+            .map_err(|e| format!("PDF export needs Node.js: {e}"))?;
+        child
+            .stdin
+            .take()
+            .ok_or("PDF input stream unavailable.")?
+            .write_all(payload.as_bytes())
+            .map_err(|e| e.to_string())?;
+        if !child.wait().map_err(|e| e.to_string())?.success() {
+            return Err("PDF export failed. Check the local console.".into());
+        }
+    }
+    Ok(())
+}
+
 impl ProposalApp {
     pub fn review_text(&self, p: &Projection) -> String {
         let mut t = narrative_text();
