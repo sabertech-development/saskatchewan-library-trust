@@ -1,0 +1,221 @@
+Saskatchewan Private Equity Library Funding
+Concept demonstration · Illustrative financial assumptions
+
+Prepared for discussion, not an investment offering. No commitments are collected.
+
+PROPOSED MECHANISM
+Private equity subscriptions -> interests in a proposed vehicle -> ownership of operating businesses -> available cash -> investors, library agreements and retained reinvestment.
+
+CURRENT ILLUSTRATIVE INPUTS (CAD)
+Total subscribed equity: CA$250,000,000
+Opening cash reserve: CA$5,000,000
+Opening invested business equity: CA$245,000,000
+Business cash yield: 8.00% of invested equity
+Management cost: 1.50% of invested equity
+Annual administration: CA$500,000
+Vehicle tax provision: 20.00% (placeholder)
+Required reserve: CA$10,000,000
+Illustrative annual library need: CA$5,000,000
+Residual shares: 50.0% investors / 20.0% libraries / 30.0% reinvestment
+
+ANNUAL OUTPUTS (CAD)
+Business cash received: CA$19,600,000
+Management costs: CA$3,675,000
+Administration: CA$500,000
+Tax provision: CA$3,085,000
+Reserve replenishment: CA$5,000,000
+Reserve draw for operating deficit: CA$0
+Residual cash: CA$7,340,000
+Investor distribution: CA$3,670,000
+Library allocation: CA$1,468,000
+Retained reinvestment: CA$2,202,000
+Closing reserve: CA$10,000,000
+Remaining library funding gap: CA$3,532,000
+Unfunded operating deficit: CA$0
+Funding need covered: 29.36%
+Investor cash yield on subscribed equity: 1.468%
+
+BOUNDARIES
+Private equity and privately owned business proceeds only. No borrowing, new government funding, donations, crowdfunding, sponsorship revenue or library user charges. Library assets, services and patron information are not transferred or pledged. No returns, capital preservation or payments are guaranteed. Existing library revenues only establish funding gaps.
+
+MODEL LIMITS
+Business cash is after business-level operating costs, taxes, maintenance capital expenditure and working capital. Vehicle costs are additional. Tax is a placeholder. New subscriptions, unrealized gains, exits and capital returns are excluded. Investor cash yield is not total return or IRR.
+
+EVIDENCE REGISTER
+
+Saskatchewan has municipal, regional and northern library structures [Verified external information]
+The provincial government describes four municipal library systems, seven regional systems, a federation of northern libraries, and the Provincial Library and Literacy Office. Wapiti is listed as a regional library serving northeast Saskatchewan. This establishes public context only; it does not establish funding gaps, participation or endorsement.
+Owner: Proposal research / proposed library working group
+Source: https://www.saskatchewan.ca/residents/education-and-learning/library-system-in-saskatchewan
+Checked: 18 November 2026
+Next: Consult the relevant library boards and communities; obtain current service and funding-gap evidence separately.
+
+Investor capital is not secured [Not yet secured]
+CA$250 million is an illustration, not a subscription or commitment.
+Owner: Proposed governing board
+Source: Project brief / concept assumption
+Checked: Not externally verified
+Next: Assess investor appetite; obtain appropriate advice and executed agreements before any capitalization.
+
+Portfolio acquisitions are not selected [Not yet secured]
+Business examples are fictional and do not form the calculator portfolio.
+Owner: Proposed investment manager
+Source: Synthetic demonstration data
+Checked: Not externally verified
+Next: Identify candidates and independently assess commercial, operational and acquisition economics.
+
+Library participation is not agreed [Not yet secured]
+All six applicant profiles are synthetic; no actual institution's budget or participation is asserted.
+Owner: Proposed library allocation committee
+Source: Synthetic demonstration data
+Checked: Not externally verified
+Next: Consult potential participants and establish actual funding gaps and eligibility.
+
+Residual split is illustrative: 50 / 20 / 30 [Illustrative assumption]
+Investor / library / reinvestment shares apply only after costs, tax provision and reserve replenishment. Custom shares are scenario changes, not agreed policy.
+Owner: Proposed governing board
+Source: User-supplied project brief
+Checked: Not externally verified
+Next: Assess acceptability to investors and libraries; incorporate accepted terms into governing agreements.
+
+Legal structure remains unresolved [Requires professional assessment]
+Saskatchewan Library Sustainability Trust was a working title only. No trust or investment vehicle is represented as established.
+Owner: Legal advisers
+Source: No professional opinion obtained
+Checked: Not assessed
+Next: Assess Canadian structure, securities, governance and library distribution arrangements.
+
+Vehicle tax treatment remains unresolved [Requires professional assessment]
+The 20% provision is a simplified modelling placeholder, not Canadian tax advice.
+Owner: Tax advisers
+Source: No professional opinion obtained
+Checked: Not assessed
+Next: Determine actual entity and investor-level treatment and revise the model accordingly.
+
+Financial sustainability is not established [Illustrative assumption]
+The model is one annual cash period. Yield assumptions are not forecasts; no capital preservation or payments are guaranteed.
+Owner: Proposed investment committee
+Source: Local calculation from supplied assumptions
+Checked: Not externally verified
+Next: Validate acquisition pricing, cash conversion, fees, losses and multi-year stress behaviour independently.
+
+Government and library endorsement not obtained [Not yet secured]
+Sharing this proposal with a director, attorney or MLA is for review and does not constitute endorsement.
+Owner: Proposal sponsor
+Source: No endorsement documented
+Checked: Not externally verified
+Next: Record any future feedback accurately and obtain permission before attributing support.
+
+No borrowing or new public funding in baseline [Proposed policy]
+Private equity and proceeds from privately owned businesses only. No donations, crowdfunding, sponsorship revenue or library user charges.
+Owner: Proposed governing board
+Source: User-supplied proposal boundaries
+Checked: Not externally verified
+Next: Confirm the mandate in proposed investment and distribution agreements.
+
+Public library assets remain outside investor collateral [Proposed policy]
+Buildings, collections, patron information and public services are not transferred to investors or pledged as collateral.
+Owner: Legal advisers and library boards
+Source: User-supplied proposal boundaries
+Checked: Not assessed
+Next: Confirm enforceable boundaries and data responsibilities in the final agreements.
+
+Allocation rules require consultation [Proposed policy]
+Equal capped baseline followed by weighted unmet need, capped awards and redistribution. All applicant fields are synthetic.
+Owner: Proposed library allocation committee
+Source: Demonstration allocation specification
+Checked: Not externally verified
+Next: Consult communities and library boards on eligibility, weights, evidence and appeals.
+
+GitHub Pages is static website hosting [Verified external information]
+The delivery service supports this browser demo. This verifies the hosting description only, not the financial proposal. GitHub records visitor IP addresses for security; this application has no analytics or input collection.
+Owner: Technical maintainer
+Source: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+Checked: 18 November 2026
+Next: Recheck hosting access and privacy requirements before sharing sensitive material.
+
+SYNTHETIC ALLOCATION EXAMPLES
+All applicant data and verified-gap fields are synthetic. Higher scores indicate greater need.
+Baseline CA$100,000. Weights [40.0, 25.0, 20.0, 15.0].
+Example Urban Library A | Urban | Request CA$1,300,000 | Award CA$214,312 | Gap CA$1,085,688 | Score 2.950
+Outcome subject to awarded resources: Retain evening opening and public computer access.
+Example Rural Branch A | Rural | Request CA$650,000 | Award CA$237,562 | Gap CA$412,438 | Score 3.550
+Outcome subject to awarded resources: Maintain weekly opening hours and interlibrary delivery.
+Example Rural Branch B | Rural | Request CA$450,000 | Award CA$208,500 | Gap CA$241,500 | Score 2.800
+Outcome subject to awarded resources: Support shared staffing and accessible reading services.
+Example Northern Library A | Northern | Request CA$1,000,000 | Award CA$276,312 | Gap CA$723,688 | Score 4.550
+Outcome subject to awarded resources: Maintain local staffing and community-selected programming.
+Example Remote Branch A | Remote | Request CA$900,000 | Award CA$293,750 | Gap CA$606,250 | Score 5.000
+Outcome subject to awarded resources: Maintain essential access and reliable material delivery.
+Example Regional Service A | Mixed / regional | Request CA$700,000 | Award CA$237,562 | Gap CA$462,438 | Score 3.550
+Outcome subject to awarded resources: Support mobile services and accessible formats.
+Unallocated: CA$0
+
+PROPOSED RESPONSIBILITIES
+
+Governing board / trustees
+Accountability for the proposed vehicle and its governing agreements.
+Set reserve policy; approve investor distribution terms under governing agreements; authorize payments through dual sign-off; establish library eligibility after consultation; approve changes only through the agreed consent process.
+Review conflicts and related-party transactions through independent members, with recusals, minutes and disclosure. No protection is legally established until governing documents provide it.
+
+Investment manager
+Steward the commercial portfolio and maintain cash forecasts.
+Source businesses, perform due diligence, oversee management, recommend reinvestment and prepare cash-supported payment schedules.
+Publish fees, related interests, performance and valuations. Reporting failures trigger escalation to the board and suspension of discretionary approvals.
+
+Investment committee
+Provide independent scrutiny of proposed acquisitions and portfolio risk.
+Approve acquisitions within a documented board mandate; review concentration, operating risks and independent valuation evidence.
+No conflicted member votes. Material transactions or mandate exceptions return to the board.
+
+Library allocation committee
+Apply the published eligibility and allocation rules independently.
+Approve library awards within the available pool and delegated mandate; document scoring; provide reasons; refer appeals to an independent review panel.
+Recuse members with applicant interests. Publish criteria and allocation results, subject to appropriate confidentiality.
+
+Participating library boards
+Retain authority over library assets, services and local priorities.
+Submit substantiated funding gaps, accept funding agreements and review recipient use of funds and service outcomes.
+Report use of funds and variances. Reporting failures trigger review, remediation and potentially future-payment suspension under agreed terms.
+
+Independent auditor
+Provide independent verification of financial reporting within an agreed audit scope.
+Audit vehicle accounts and examine cash-source and use reconciliation; report findings to the governing board.
+Independent appointment, access to records and disclosed findings. An audit does not guarantee future performance.
+
+Legal and tax advisers
+Assess structure, documentation, tax and regulatory obligations.
+Review investor rights, offering requirements, legal enforceability, library agreements and the tax model before commitments.
+Written professional assessment is not yet obtained. Preferred returns, carried interest and redemptions require revised modelling if introduced.
+
+READINESS GATES
+
+Provincial needs assessment
+Prerequisites: Agreement on consultation scope and respectful engagement with potential participants.
+Outputs: Funding-gap dataset; service priorities; potential participant consultation. No synthetic budget may substitute for verified need.
+Owner: Proposed library working group and proposal sponsor
+Gate: Is there a documented provincial requirement and a credible basis for eligibility?
+
+Structure and commercial terms
+Prerequisites: A documented needs assessment and initial investor appetite discussions.
+Outputs: Structure options; investor rights; proposed distribution agreements; governance design; reserve and liquidity policies.
+Owner: Legal and tax advisers, proposed governing board
+Gate: Can proposed terms meet legal requirements and be acceptable to both investors and participating libraries?
+
+Feasibility and independent assessment
+Prerequisites: Defined structure options and testable commercial assumptions.
+Outputs: Acquisition economics; investor appetite assessment; financial stress testing; legal and tax review.
+Owner: Proposed investment committee and independent professional advisers
+Gate: Does independently reviewed evidence justify proceeding, revising or stopping?
+
+Capitalization and acquisitions
+Prerequisites: Feasibility gate passed; finalized documents; all required approvals and disclosures.
+Outputs: Executed agreements; subscribed private equity; completed due diligence; acquired businesses; funded reserve.
+Owner: Proposed governing board and investment manager
+Gate: Are capital, controls, businesses and the required reserve actually in place?
+
+Library distributions and monitoring
+Prerequisites: Positive available cash, approved eligibility and executed recipient agreements.
+Outputs: Cash-supported awards; service reporting; audited accounts; review of allocation effectiveness and payment timing.
+Owner: Proposed allocation committee, library boards and independent auditor
+Gate: Do verified cash and recipient reporting support each payment and continued operation?
