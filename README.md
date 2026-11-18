@@ -1,30 +1,42 @@
-# Saskatchewan Private Equity Library Funding
+# Saskatchewan Library Sustainability Trust
 
-An interactive concept demonstration for library leadership, legal advisers,
-elected representatives and prospective investment partners. It explains a
-proposed private-equity-funded mechanism; it is not an investment offering.
+A locally runnable concept demonstration for library directors, corporate donors,
+community representatives and professional advisers.
 
-## Architecture
+“Building a lasting fund for Saskatchewan libraries through donations, responsible
+investment, and transparent community support.”
 
-- **Rust:** the complete interface, original illustrations, financial engine,
-  allocation engine, content, local state, exports and keyboard interactions.
-  `eframe` / `egui` render the interface to a WebAssembly canvas.
-- **Unison:** an independent, executable specification of the proposed 50/20/30
-  cash policy, with base, lower-income, no-income and unfunded-deficit checks.
-  This is verification code, not a browser runtime or a remote financial service.
-- **Go:** static build assembly, minimal loader generation, a read-only local
-  HTTP server and server tests. The deployed site needs no running Go service.
+The proposed fundraising target is **CA$250 million of donated principal from
+corporations**. This is a target, not secured capital. The working investment
+approach is money-market-style investing, subject to professional assessment of
+specific instruments, custody, liquidity, costs, risks and legal suitability.
+The proposed policy allocates **50% of positive net cash interest to libraries and
+reinvests 50%**, after investment and administration costs. Actual grants also
+respect eligible need, reserves and donor restrictions. Unused grant capacity
+stays in the fund.
 
-There is no Java, application JavaScript, CSS file or HTML interface template.
-As agreed for browser delivery, Go generates the minimal HTML/WebAssembly loader.
-It uses JavaScript only to size the canvas and load the Rust module;
-`wasm-bindgen` generates the required browser bindings. Canvas sizing uses the
-browser style API within that loader; all application visuals are drawn in Rust.
+Donors receive no shares, equity, repayment rights or investment returns.
+Libraries retain their existing ownership, governance and service authority.
+Trustees oversee the donated assets; they do not personally own them.
+
+“Trust” is a working description. The Canadian legal and charitable structure
+remains unresolved. No charitable status, tax receipts, secured donations,
+participation, endorsements or guaranteed funding are claimed. This demo does
+not collect donations and has no payment processing.
+
+## Shareable site
+
+The public proposal is hosted on GitHub Pages:
+https://sabertech-development.github.io/saskatchewan-library-trust/
+
+The source is on `main`; the verified static build is on `gh-pages`. The site
+contains only the concept presentation and calculations performed in the visitor's
+browser. Publishing the proposal does not establish the trust, charitable status,
+library participation or a fundraising service. No donation collection is enabled.
 
 ## Run locally
 
-Prerequisites: Rust with the `wasm32-unknown-unknown` target, `wasm-pack`, Go,
-and Unison UCM 1.3.0 for the independent policy checks.
+Prerequisites: Rust with `wasm32-unknown-unknown`, `wasm-pack`, and Go.
 
 ```powershell
 rustup target add wasm32-unknown-unknown
@@ -32,63 +44,86 @@ go run ./cmd/studio build
 go run ./cmd/studio serve
 ```
 
-Open **http://127.0.0.1:4387/**. For another unused port:
+Open **http://127.0.0.1:4387/#/overview**. The server serves files only and rejects
+POST, PUT and DELETE. Use `serve -addr 127.0.0.1:4390` for an alternate local port.
+No model inputs are transmitted, stored in URLs or persisted between visits.
 
-```powershell
-go run ./cmd/studio serve -addr 127.0.0.1:4390
-```
+- Visual presentation: `index.html#/overview`
+- Semantic HTML reading and calculator: `reader.html`
+- Plain-text default review and complete ledger: `review.txt`
+- Optional native visual preview: `cargo run --bin library-funding`
 
-Optional native preview: `cargo run --bin library-funding`.
+## Experience
 
-## Views
+Both the visual demo and the semantic HTML page now use a bounded desktop
+workspace with a compact heading, aligned panels and tabs that replace content.
+The funding view has How it works, Scenario calculator and Funding & accountability
+views. Its chart describes the 50/50 split of **net interest**, not a division of
+principal. Calculator inputs and outputs are grouped into separate tabs; financial
+ledgers have their own views. At small widths or high zoom the layout reflows so
+text and controls remain usable. The no-script narrative is retained as a fallback.
 
-`#/overview` explains the proposition and its boundaries. `#/atlas` connects
-private investors, the vehicle, businesses, reserve, allocation committee,
-libraries and community outcomes. `#/investment` separates ownership from
-funding agreements. `#/money` walks the cash waterfall. `#/lab` exposes every
-assumption and stress preset. `#/allocation` shows capped needs-based awards
-for six fictional applicants. `#/governance` explains proposed responsibilities.
-`#/evidence` is a searchable, sourced readiness register. `#/roadmap` provides
-five decision gates. `#/summary` supports director, attorney and MLA review.
+The five main questions cover why a lasting source matters, how corporate gifts
+build the fund, how interest supports libraries and reinvestment, how communities
+receive fair support, and who oversees and reports the money. The library atlas
+connects donors, communities, the fund, reserves, oversight, libraries and service
+outcomes. Opening hours, staffing, collections, digital access, accessibility and
+programming are illustrative uses, not verified local needs or promised results.
 
-The six-stop guided tour links these views. Section links are shareable.
-Custom financial inputs stay in memory and are not placed in URLs, sent to a
-server, stored in cookies, or persisted. Reloading starts the base illustration.
+Supporting views explain scenarios, allocation criteria, evidence, readiness and
+review. Existing links `#/investment`, `#/money` and `#/lab` resolve to the new
+donations, spending and scenarios views. The five-stop tour, keyboard navigation,
+responsive menu, focus outlines and Escape-to-close behavior are retained.
 
-## Review and print
+## Financial model
 
-The summary downloads a readable `.txt` review brief with the current
-assumptions, allocations, evidence, responsibilities and readiness gates, plus
-optional JSON model data. Open the text brief in any text editor to print it.
-The build also includes `review.txt`, a direct, screen-reader-friendly default
-brief which can be shared without opening the canvas application.
+The default scenario assumes the proposed target has already been raised. All
+amounts and rates are editable. Interest and cost assumptions are hypothetical,
+not quoted yields, approved budgets or forecasts. Additional annual donations
+may be zero. Restricted long-term gifts and immediate-use gifts have independent
+ledgers, and unused immediate-use gifts never become endowment capital.
 
-The Rust canvas supports keyboard controls, visible focus and static,
-motion-free rendering. An on-screen text table accompanies allocation charts.
-It does **not** provide the same DOM semantics as a conventional HTML table;
-the plain-text brief is the accessible reading and print alternative. There is
-no CSS print stylesheet, consistent with the requested canvas-only application.
+The shared Rust engine models 1–50 years. It separates cash interest from capital
+value changes, including weak-income and loss paths. Net interest is cash interest
+less all investment and administration costs due, floored at zero. The proposed
+library budget is 50% of net interest; the other 50% is reinvested. The share is
+editable for comparisons. Grant caps account for reserve and principal floors,
+need and separately funded immediate-use grants. Retained interest is already
+included in closing assets and is not counted twice.
 
-## Model and decisions
+The reserve is an accounting retention floor inside the fund, expressed as a
+percentage of opening balance, not a separate cash account. With principal
+protection, the retained floor is the greater of cumulative contributions and
+the reserve target. Losses and permitted costs can still erode principal.
 
-Defaults follow the supplied brief: CA$250M total equity includes CA$5M opening
-reserve, leaving CA$245M invested in businesses. An 8% business cash yield and
-1.5% management rate use that invested amount. Administration is CA$500k; the
-vehicle tax placeholder is 20%; target reserve is CA$10M. Positive residual cash
-is split 50% investors, 20% libraries and 30% retained reinvestment.
+A separately labelled **comparison** can use a spending rate times the opening
+annual balance. This is not the default interest-sharing proposal. It illustrates
+how grants may use past accumulated earnings or, if hypothetical gift terms allow,
+contributed capital. Changing the illustration never releases an actual restriction.
 
-Base annual result: CA$1,468,000 for libraries, 29.36% of the illustrative CA$5M
-need; CA$3,532,000 remains unfunded. Investor cash is CA$3,670,000 (1.468% of total
-subscribed equity), retained reinvestment CA$2,202,000 and closing reserve CA$10M.
-Cash yield is not IRR or total return. The model does not establish sustainability.
+Outputs include annual interest, costs, library grants by source, reinvestment,
+nominal and inflation-adjusted fund balances, cumulative support, reserve and
+funding gaps, unpaid costs and capital used for grants. The full timing and
+calculation rules appear beside the tool and in every review export. No tax
+treatment or investment product is assumed. Results do not guarantee permanent
+funding, capital preservation or preservation of purchasing power.
 
-Capital, acquisitions, participation and endorsement are unsecured or unagreed.
-Legal structure, tax treatment, investor rights, redemption terms, liquidity,
-preferred returns, carried interest, reserve policy, eligibility, allocation
-weights, appeals and legally effective protection of distribution terms require
-decisions and professional assessment. No public library asset is investor
-collateral. No new government funding, donations, sponsorships, crowdfunding,
-library charges or borrowing are included.
+## Architecture and accessibility
+
+- Rust/egui renders the visual presentation and original architectural artwork.
+- `src/finance.rs` is the single calculation engine for both interfaces.
+- `src/reader.rs` generates semantic HTML with headings, native labelled controls,
+  fieldsets, status/error announcements and captioned tables. A small JavaScript
+  adapter calls the compiled Rust engine; it contains no duplicate financial math.
+- Go builds and serves static output in `dist/`; no production service is required.
+- Unison independently checks selected one-period grant and interest policies.
+- Space Grotesk is bundled under the SIL Open Font License in `assets/fonts/`.
+
+The canvas has keyboard support and a first-focus link to the semantic companion.
+The companion supplies the core proposal, text atlas, scenario tool and exact
+data tables without requiring interpretation of a chart. The narrative also works
+without JavaScript. These improvements are not a claim of WCAG conformance or a
+substitute for assistive-technology user testing.
 
 ## Verification
 
@@ -97,30 +132,22 @@ cargo test --tests
 go test ./...
 go run ./cmd/studio policy
 cargo run --example render_review
+go run ./cmd/studio build
+npm install --prefix target/semantic-tests --no-audit --no-fund jsdom
+node tests/semantic.mjs
 ```
 
-On Windows the Go policy command sets UTF-8 console input/output encoding for
-UCM. If running UCM directly, run `chcp 65001` first. The transcript uses only
-built-in Unison functions, with no remote library download.
+Unison UCM 1.3.0 is needed for the optional independent policy checks. The DOM
+integration test runs the actual WASM engine in a DOM simulator; it does not
+automate a browser. Rendered desktop/mobile QA artifacts live in `target/review/`.
+See `VERIFICATION.md` for coverage and limitations.
 
-`examples/render_review.rs` rasterizes the actual egui meshes to PNGs in
-`target/review/`, for deterministic desktop and mobile visual inspection.
-This is offscreen Rust UI QA; it is not a claim of browser automation coverage.
-See [VERIFICATION.md](VERIFICATION.md) for the final verification record.
+## References
 
-## Sources and publication
+Visual direction follows the requested [Saber atlas reference](https://wolfbreed1829.github.io/saber-ecosystem-demo/#/atlas).
+Library-specific content and Rust artwork are original.
 
-The reference at [Saber ecosystem atlas](https://wolfbreed1829.github.io/saber-ecosystem-demo/#/atlas)
-informed the dark presentation, selectable network, relationship overlays and
-inspector approach. The implementation, content and artwork here are original.
-No assets or application code were copied from that project.
-
-The [Government of Saskatchewan library system overview](https://www.saskatchewan.ca/residents/education-and-learning/library-system-in-saskatchewan)
-was checked on 18 November 2026 for provincial context only. It does not verify
-any invented funding gap, participation or endorsement. All business and
-applicant figures are explicitly synthetic.
-
-Static output in `dist/` is published through GitHub Pages. Application code
-has no analytics, forms, payment processing or input collection. GitHub Pages
-records visitor IP addresses for security, as described in its
-[hosting documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+The evidence view links the [Saskatchewan library system overview](https://www.saskatchewan.ca/residents/education-and-learning/library-system-in-saskatchewan),
+[CRA guidance before giving](https://www.canada.ca/en/revenue-agency/services/charities-giving/giving-charity-information-donors/before-you-give.html),
+and [BC Securities Commission information on mutual funds](https://www.investright.org/understand-investing/types-of-investments/common-investments/mutual-funds/).
+These sources establish context only; they do not endorse or verify the proposed fund.

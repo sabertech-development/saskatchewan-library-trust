@@ -16,7 +16,7 @@ pub fn applicants() -> Vec<Applicant> {
         (
             "Example Urban Library A",
             "Urban",
-            1_300_000.,
+            65_000.,
             4.,
             1.,
             4.,
@@ -26,7 +26,7 @@ pub fn applicants() -> Vec<Applicant> {
         (
             "Example Rural Branch A",
             "Rural",
-            650_000.,
+            32_500.,
             4.,
             3.,
             3.,
@@ -36,7 +36,7 @@ pub fn applicants() -> Vec<Applicant> {
         (
             "Example Rural Branch B",
             "Rural",
-            450_000.,
+            22_500.,
             3.,
             3.,
             2.,
@@ -46,7 +46,7 @@ pub fn applicants() -> Vec<Applicant> {
         (
             "Example Northern Library A",
             "Northern",
-            1_000_000.,
+            50_000.,
             5.,
             4.,
             4.,
@@ -56,7 +56,7 @@ pub fn applicants() -> Vec<Applicant> {
         (
             "Example Remote Branch A",
             "Remote",
-            900_000.,
+            45_000.,
             5.,
             5.,
             5.,
@@ -66,7 +66,7 @@ pub fn applicants() -> Vec<Applicant> {
         (
             "Example Regional Service A",
             "Mixed / regional",
-            700_000.,
+            35_000.,
             4.,
             3.,
             3.,

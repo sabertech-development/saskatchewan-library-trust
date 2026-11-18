@@ -6,9 +6,21 @@ use std::collections::HashMap;
 
 fn main() {
     std::fs::create_dir_all("target/review").unwrap();
+    let filters: Vec<String> = std::env::args().skip(1).collect();
     for (name, w, h, route) in [
+        ("funding-desktop", 1920, 1200, 3),
+        ("funding-laptop", 1366, 768, 3),
+        ("funding-calculator-laptop", 1366, 768, 3),
+        ("overview-laptop", 1366, 768, 0),
+        ("scenario-laptop", 1366, 768, 4),
+        ("governance-laptop", 1366, 768, 6),
+        ("donations-laptop", 1366, 768, 2),
+        ("evidence-laptop", 1366, 768, 7),
         ("overview-desktop", 1440, 1100, 0),
-        ("atlas-desktop", 1600, 1100, 1),
+        ("overview-details", 1440, 1100, 0),
+        ("atlas-desktop", 1440, 900, 1),
+        ("atlas-wide", 1920, 1080, 1),
+        ("atlas-tablet", 820, 1180, 1),
         ("lab-desktop", 1440, 1200, 4),
         ("allocation-desktop", 1440, 1200, 5),
         ("overview-mobile", 390, 844, 0),
@@ -17,13 +29,36 @@ fn main() {
         ("evidence-mobile", 390, 1100, 7),
         ("menu-mobile", 390, 1100, 0),
     ] {
+        if !filters.is_empty() && !filters.iter().any(|filter| name.contains(filter)) {
+            continue;
+        }
         let ctx = Context::default();
         let mut app = ProposalApp::with_context(&ctx);
         app.navigate(route);
         let mut textures: HashMap<TextureId, ColorImage> = HashMap::new();
         let mut shapes = Vec::new();
-        for frame in 0..5 {
-            let events = if name == "menu-mobile" && (frame == 2 || frame == 3) {
+        for frame in 0..10 {
+            let events = if name == "funding-calculator-laptop" && (frame == 2 || frame == 3) {
+                let pos = pos2(230., 282.);
+                vec![
+                    Event::PointerMoved(pos),
+                    Event::PointerButton {
+                        pos,
+                        button: PointerButton::Primary,
+                        pressed: frame == 2,
+                        modifiers: Modifiers::NONE,
+                    },
+                ]
+            } else if name == "overview-details" && frame == 3 {
+                vec![
+                    Event::PointerMoved(pos2(700., 600.)),
+                    Event::MouseWheel {
+                        unit: MouseWheelUnit::Point,
+                        delta: vec2(0., -710.),
+                        modifiers: Modifiers::NONE,
+                    },
+                ]
+            } else if name == "menu-mobile" && (frame == 2 || frame == 3) {
                 let pos = pos2(339., 41.);
                 vec![
                     Event::PointerMoved(pos),
@@ -63,7 +98,7 @@ fn main() {
         }
         let mut pixels = vec![0u8; w * h * 4];
         for p in pixels.chunks_exact_mut(4) {
-            p.copy_from_slice(&[7, 15, 25, 255]);
+            p.copy_from_slice(&[3, 5, 9, 255]);
         }
         for clipped in shapes {
             let Primitive::Mesh(mesh) = clipped.primitive else {

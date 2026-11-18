@@ -2,7 +2,7 @@
 name = "saskatchewan-library-funding"
 version = "0.1.0"
 edition = "2024"
-description = "Saskatchewan Private Equity Library Funding — an interactive proposal for review"
+description = "Saskatchewan Library Sustainability Trust — an interactive proposal for review"
 publish = false
 
 [lib]

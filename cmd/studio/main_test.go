@@ -23,8 +23,11 @@ func TestGeneratedLoader(t *testing.T) {
 			t.Fatalf("Missing %s", v)
 		}
 	}
-	if strings.Contains(s, "<style") || strings.Contains(s, "stylesheet") {
-		t.Fatal("Unexpected authored CSS")
+	if !strings.Contains(s, "reader.html") || !strings.Contains(s, "Accessible reading") {
+		t.Fatal("Missing semantic companion access")
+	}
+	if strings.Contains(strings.ToLower(s), "private equity") {
+		t.Fatal("Obsolete branding in loader")
 	}
 }
 func TestReadOnlyServer(t *testing.T) {

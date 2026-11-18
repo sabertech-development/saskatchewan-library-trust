@@ -1,0 +1,68 @@
+/* Bounded review workspace, with native HTML semantics and readable reflow. */
+body.review-app{height:100dvh;min-height:600px;display:flex;flex-direction:column;overflow:hidden;font-size:15px;line-height:1.55}
+.review-app [hidden]{display:none!important}
+.review-app header,.review-app main,.review-app footer{max-width:none;margin:0}
+.review-app>header{height:84px;flex:none;display:flex;align-items:center;gap:36px;padding:14px 3.5%;background:#03070d}
+.review-app .brand{flex:none;font-size:18px;line-height:1.35;color:#e8f2fa;margin:0}.brand small{display:block;font:10px Consolas,monospace;letter-spacing:1px;color:#91a9bc;margin-top:5px}
+.review-app nav{flex:1;flex-wrap:nowrap;overflow:auto;gap:24px;align-self:stretch;align-items:center;font-size:13px}
+.review-app nav a{white-space:nowrap;text-decoration:none;color:#91a9bc;padding:12px 0;border-bottom:2px solid transparent}
+.review-app nav a[aria-current=page]{color:#e8f2fa;border-color:#3dcaff}
+.review-app main{flex:1;min-height:0;padding:22px 3.5%;background:radial-gradient(ellipse at 75% 40%,#061a29,transparent 70%)}
+.review-app .screen{height:100%;margin:0;display:flex;flex-direction:column;gap:16px;min-height:0}
+.review-app .screen-heading{padding:0;border:0;display:block;flex:none}
+.review-app h1,.review-app h2,.review-app h3,.review-app p{margin:0;max-width:none}
+.review-app .screen-heading h1{font-size:clamp(27px,2.5vw,39px);font-weight:500;line-height:1.2;letter-spacing:-1.2px;margin:8px 0}
+.review-app .eyebrow{font:10px/1.5 Consolas,monospace;letter-spacing:1.6px;color:#3dcaff;text-transform:uppercase}
+.review-app .screen-subtitle{font-size:14px;color:#91a9bc}
+.review-app .workspace{display:grid;grid-template-columns:minmax(260px,.30fr) minmax(0,.70fr);gap:22px;flex:1;min-height:0}
+.review-app .panel{margin:0;padding:22px;background:linear-gradient(125deg,#0b1c29b8,#050d16e0);border:1px solid #1c3447;min-width:0;min-height:0;position:relative}
+.review-app .panel:before{content:'';position:absolute;top:-1px;left:-1px;width:30px;border-top:1px solid #3dcaff}
+.review-app .context-panel{display:flex;flex-direction:column;gap:14px;overflow:auto}
+.review-app .context-art{width:100%;flex:1;min-height:70px;max-height:300px;color:#3dcaff}
+.review-app .target{font-size:30px;line-height:1.2;color:#3dcaff;letter-spacing:-1px}
+.review-app .muted{color:#91a9bc;font-size:14px}.review-app .split-stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #1c3447;border-bottom:1px solid #1c3447;padding:12px 0;gap:15px}
+.review-app .split-stats strong{font-size:29px;font-weight:500;color:#b4edff;display:block}.review-app .split-stats span{font-size:13px;color:#91a9bc}
+.review-app .context-links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}
+.review-app .context-panel .muted:last-child{margin-top:auto}
+.review-app .content-panel{display:flex;flex-direction:column;gap:18px;overflow:hidden}
+.review-app .tab-list{display:flex;gap:22px;flex:none;overflow-x:auto;border-bottom:1px solid #254255;min-height:45px}
+.review-app .tab-list button{flex:none;border:0;background:transparent;padding:10px 1px;border-bottom:2px solid transparent;color:#91a9bc;min-height:40px;font-size:14px;border-radius:0}
+.review-app .tab-list button[aria-selected=true]{color:#b4edff;border-bottom-color:#3dcaff}
+.review-app .tab-page{min-height:0;overflow:auto;flex:1;padding:0 3px 2px 0}
+.review-app .tab-page>p,.review-app .tab-page>h3,.review-app .tab-page>div,.review-app .tab-page>details{margin-bottom:18px}
+.review-app h3{font-size:25px;line-height:1.3;font-weight:500;letter-spacing:-.5px}
+.review-app .tab-page p{color:#a8becf;line-height:1.75}
+.review-app .compact-rows{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+.review-app .compact-rows .panel{border:0;background:none;padding:0 0 16px;border-bottom:1px solid #1c3447}
+.review-app .compact-rows h3{font-size:19px;margin-bottom:7px}.review-app .compact-rows p{font-size:14px}
+.review-app details{margin:0;padding:16px}.review-app details p{margin-top:12px}
+.review-app .record-picker{margin:0 0 16px}.review-app .record-body p{margin:16px 0}.review-app .record-body dl{display:grid;grid-template-columns:130px 1fr;gap:14px}.review-app .record-body dd{margin:0;color:#a8becf}
+.review-app .notice{padding:13px 18px;border-left:3px solid #3dcaff;background:#0b2635;color:#b4edff;flex:none;font-size:14px}
+.review-app .funding-columns{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:22px;min-height:0;flex:1}
+.review-app .funding-columns>.panel{overflow:auto;display:flex;flex-direction:column;gap:18px}
+.review-app .ring-area{display:grid;grid-template-columns:minmax(150px,.8fr) 1.2fr;gap:24px;align-items:center;flex:1;min-height:210px}
+.review-app .ring{aspect-ratio:1;border-radius:50%;background:conic-gradient(#3dcaff 0 49.7%,#08111d 49.7% 50.3%,#275f7d 50.3% 99.7%,#08111d 99.7%);display:grid;place-items:center;max-height:300px;width:100%;max-width:300px}
+.review-app .ring-center{width:82%;height:82%;background:#06101b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;font-size:13px;color:#91a9bc}
+.review-app .ring-center strong{font-size:clamp(26px,2.6vw,45px);font-weight:500;letter-spacing:-2px;color:#e8f2fa}
+.review-app .funding-key>div{border-bottom:1px solid #1c3447;padding:13px 0}.review-app .funding-key strong{display:block;font-size:28px;font-weight:500;color:#b4edff}.review-app .funding-key small{color:#91a9bc;font-size:13px}
+.review-app .funding-columns h3{font-size:29px}.review-app .funding-columns .compact-rows{gap:18px}.review-app .funding-columns .compact-rows h3{font-size:19px}
+.review-app .scenario-content{min-height:0;flex:1;display:flex;flex-direction:column;gap:12px}
+.review-app .scenario-toolbar{display:flex;align-items:center;gap:16px;flex:none}.review-app .scenario-toolbar label{margin:0;white-space:nowrap}.review-app .scenario-toolbar select{max-width:370px}
+.review-app .scenario-columns{display:grid;grid-template-columns:minmax(320px,.39fr) minmax(0,.61fr);gap:20px;min-height:0;flex:1}
+.review-app #scenario-form{display:flex;flex-direction:column;gap:12px;min-height:0}.review-app #scenario-form>.grid{display:block;flex:1;min-height:0;overflow:auto}
+.review-app fieldset{padding:0;margin:0;border:0;background:none}.review-app legend{font-size:18px;color:#e8f2fa;padding:0;margin-bottom:10px;font-weight:500}
+.review-app label{font-size:14px;margin-top:10px}.review-app input,.review-app select,.review-app button{font-size:14px;padding:7px 10px;min-height:36px;border-color:#28506a}
+.review-app fieldset p{font-size:13px;color:#91a9bc;margin:10px 0}
+.review-app .actions{margin:0;gap:10px;flex:none}.review-app #results{margin:0;display:flex;flex-direction:column;gap:12px;min-height:0;flex:1}
+.review-app #results>.tab-list{order:-1}
+@media(min-width:1000px){.review-app .metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.review-app .metrics div{padding:5px 0 8px}.review-app .metrics dd{font-size:26px}.review-app .metrics dt{font-size:13px}.review-app .scenario-toolbar .actions{margin-left:auto}.review-app .scenario-toolbar select{max-width:300px}}
+@media(min-width:1000px){.review-app #input-panel-0 fieldset{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:18px 12px;align-items:center}.review-app #input-panel-0 label{margin:0}.review-app #input-panel-0 legend{margin-bottom:15px}}
+.review-app #results-title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.review-app #result-status{font-size:13px;line-height:1.5;color:#a8becf;flex:none}.review-app .metrics{margin:0;gap:14px}.review-app .metrics div{padding:8px 0 14px;background:none;border-bottom:1px solid #1c3447}.review-app .metrics dt{font-size:14px;color:#91a9bc}.review-app .metrics dd{font-size:29px;margin:4px 0}
+.review-app .table-wrap{height:100%;max-height:100%;font-size:13px}.review-app th,.review-app td{padding:8px}.review-app caption{font-size:13px;padding:8px}
+.review-app #engine-status{font-size:12px;color:#91a9bc}.review-app #error:empty{display:none}.review-app #error{font-size:13px}
+.review-app footer{flex:none;padding:10px 3.5%;font:10px/1.5 Consolas,monospace;color:#91a9bc;border-top:1px solid #1c3447;display:flex;justify-content:space-between;gap:18px}
+.review-app .sr-only{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
+@media(max-height:850px) and (min-width:1000px){.review-app main{padding-top:17px;padding-bottom:17px}.review-app .screen{gap:12px}.review-app .panel{padding:18px}.review-app .context-panel{gap:10px}.review-app .target{font-size:27px}.review-app .context-art{max-height:140px}.review-app .tab-page>p,.review-app .tab-page>h3,.review-app .tab-page>div{margin-bottom:13px}.review-app .funding-columns{gap:18px}.review-app .funding-columns>.panel{gap:12px}.review-app .compact-rows{gap:12px 22px}.review-app .compact-rows .panel{padding-bottom:10px}.review-app .funding-columns h3{font-size:25px}.review-app .ring-area{gap:16px;min-height:170px}.review-app .funding-key>div{padding:9px 0}.review-app .metrics dd{font-size:26px}.review-app label{margin-top:7px}}
+@media(max-width:999px),(max-height:599px){body.review-app{min-height:100dvh;height:auto;overflow:auto}.review-app>header{height:auto;flex-wrap:wrap;gap:14px}.review-app nav{flex-basis:100%;min-height:48px}.review-app main{padding:18px}.review-app .screen{min-height:650px;height:auto}.review-app .workspace,.review-app .funding-columns,.review-app .scenario-columns{display:flex;flex-direction:column}.review-app .context-panel{display:none}.review-app .content-panel{min-height:450px}.review-app .tab-page{overflow:visible}.review-app #scenario-form>.grid{overflow:visible}.review-app .scenario-columns>.panel{min-height:400px}.review-app .table-wrap{max-height:450px}.review-app .scenario-toolbar{align-items:flex-start;flex-direction:column;gap:4px}.review-app footer{flex-wrap:wrap}.review-app .record-body dl{grid-template-columns:1fr}.review-app .screen-heading h1{font-size:28px}.review-app .notice{font-size:13px}.review-app .ring-area{min-height:200px}}
+@media print{body.review-app{height:auto;overflow:visible}.review-app [hidden]{display:block!important}.review-app .screen,.review-app .workspace,.review-app .funding-columns,.review-app .scenario-columns{display:block;height:auto}.review-app .context-panel,.review-app .tab-list{display:none}.review-app .tab-page,.review-app .panel{overflow:visible;height:auto}.review-app footer{display:block}}

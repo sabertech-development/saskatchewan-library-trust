@@ -1,7 +1,8 @@
-# Independent cash-policy verification
+# Independent grant-policy verification
 
-Unison executes the specification in `distribution.u`. This is an independent
-check of the Rust engine, not a claim that the proposal is commercially viable.
+Unison executes the one-period grant and separate-donation-ledger specification
+in `distribution.u`. This checks policy caps independently of the Rust engine.
+It does not establish legal suitability, investment performance or sustainability.
 
 ```ucm
 scratch/main> builtins.merge

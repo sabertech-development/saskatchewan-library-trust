@@ -1,16 +1,74 @@
-pub const TITLE: &str = "Saskatchewan Private Equity Library Funding";
-pub const STATUS: &str = "Concept demonstration · Illustrative financial assumptions";
+pub const TITLE: &str = "Saskatchewan Library Sustainability Trust";
+pub const PRINCIPAL_TARGET: f64 = 250_000_000.;
+pub const TARGET_MESSAGE: &str = "A proposed CA$250 million principal fund, raised through corporate donations. This is a fundraising target, not money already secured.";
+pub const MESSAGE: &str = "Building a lasting fund for Saskatchewan libraries through donations, responsible investment, and transparent community support.";
+pub const STATUS: &str =
+    "Proposed concept · No donations collected · Structure and charitable status unresolved";
+pub const QUALIFICATION: &str = "“Trust” is a working description. The appropriate Canadian legal and charitable structure remains to be determined. No charitable status, secured donations, library participation, endorsements or approved legal structure are claimed. No tax receipts are promised.";
 pub const ROUTES: [(&str, &str); 10] = [
-    ("overview", "Overview"),
-    ("atlas", "Provincial Atlas"),
-    ("investment", "Investment Model"),
-    ("money", "Money Flow"),
-    ("lab", "Sustainability Lab"),
-    ("allocation", "Library Allocation"),
-    ("governance", "Governance"),
-    ("evidence", "Evidence & Readiness"),
-    ("roadmap", "Implementation Roadmap"),
+    ("overview", "Why a lasting fund"),
+    ("atlas", "Library Atlas"),
+    ("donations", "How donations help"),
+    ("spending", "Supporting libraries"),
+    ("scenarios", "Endowment Scenarios"),
+    ("allocation", "Fair community funding"),
+    ("governance", "Oversight & reporting"),
+    ("evidence", "Evidence & open questions"),
+    ("roadmap", "Readiness steps"),
     ("summary", "Review Summary"),
+];
+pub const QUESTIONS: [(&str, &str, usize); 5] = [
+    (
+        "Why a lasting funding source?",
+        "Libraries plan services over many years. A supplementary long-term fund could help sustain access as needs and costs change. Actual funding gaps still need local evidence.",
+        0,
+    ),
+    (
+        "How do donations build the fund?",
+        "Corporate donations build a proposed CA$250 million principal fund. Donors receive no shares, equity, repayment rights or investment returns. Immediate-use gifts are accounted for separately.",
+        2,
+    ),
+    (
+        "How could support last?",
+        "Invest donated principal using a professionally reviewed money-market-style approach. The proposed split sends 50% of net interest to libraries and reinvests 50%. Rates, funding and purchasing power vary.",
+        3,
+    ),
+    (
+        "How would communities benefit fairly?",
+        "Published eligibility, documented needs, donor-compatible awards and an appeal process would connect support to local priorities.",
+        5,
+    ),
+    (
+        "Who would oversee the money?",
+        "Trustees or a governing board would oversee purpose, restrictions and professional management. Library authorities retain their service decisions.",
+        6,
+    ),
+];
+pub const OUTCOMES: [(&str, &str); 6] = [
+    (
+        "Opening hours",
+        "Illustrative use: maintain evening or weekend access where locally needed.",
+    ),
+    (
+        "Staffing",
+        "Illustrative use: support staff capacity for reliable public service.",
+    ),
+    (
+        "Collections",
+        "Illustrative use: refresh books, local resources and accessible formats.",
+    ),
+    (
+        "Digital access",
+        "Illustrative use: provide public computers, connectivity and digital learning.",
+    ),
+    (
+        "Accessibility",
+        "Illustrative use: reduce physical, sensory and communication barriers.",
+    ),
+    (
+        "Programming",
+        "Illustrative use: support community-led reading, learning and cultural activities.",
+    ),
 ];
 
 pub struct Node {
@@ -23,99 +81,91 @@ pub struct Node {
     pub dependencies: &'static str,
     pub readiness: &'static str,
     pub question: &'static str,
-    pub pos: [f32; 2],
     pub kind: usize,
 }
 pub const NODES: [Node; 7] = [
     Node {
-        name: "Private investors",
-        short: "Private investors",
-        purpose: "Subscribe private equity in exchange for interests in the proposed investment vehicle.",
-        inputs: "Private equity subscriptions only. No borrowing in the baseline.",
-        outputs: "Subscribed equity; acceptance of proposed distribution terms.",
-        owner: "Proposed governing board and subscription administrator",
-        dependencies: "Investor appetite, disclosure, eligibility and executed agreements.",
-        readiness: "Not yet secured",
-        question: "Will investors accept the library allocation, risks and liquidity restrictions?",
-        pos: [0.13, 0.24],
+        name: "Corporate donors",
+        short: "Corporate donors",
+        purpose: "Contribute gifts to the stated library purpose without receiving an ownership interest or financial return.",
+        inputs: "Corporate donations toward the proposed CA$250 million principal target, with clearly documented gift terms.",
+        outputs: "Long-term capital gifts or separately tracked immediate-use gifts.",
+        owner: "Corporate donors and proposed gift-administration team",
+        dependencies: "Approved structure, gift-acceptance policy and appropriate receipting arrangements.",
+        readiness: "No donations secured or collected",
+        question: "Which gift terms would support community needs and responsible stewardship?",
         kind: 0,
     },
     Node {
-        name: "Proposed holding vehicle",
-        short: "Holding vehicle",
-        purpose: "Own interests in operating businesses and apply the proposed cash distribution policy.",
-        inputs: "Subscribed equity; business distributions after business-level obligations.",
-        outputs: "Reserve replenishment; investor cash; library funding; retained reinvestment.",
-        owner: "Proposed governing board or trustees",
-        dependencies: "Legal and tax assessment, investor-approved governing documents.",
-        readiness: "Requires professional assessment",
-        question: "Which legal structure, investor rights and tax treatment are appropriate?",
-        pos: [0.43, 0.36],
-        kind: 1,
-    },
-    Node {
-        name: "Operating businesses",
-        short: "Portfolio businesses",
-        purpose: "Generate cash from established commercial operations under long-term ownership.",
-        inputs: "Investment equity, operating capabilities and working capital.",
-        outputs: "Cash after operating expenses, business taxes, maintenance capital expenditure and working-capital needs.",
-        owner: "Business management, overseen by proposed investment manager",
-        dependencies: "Acquisition diligence, viable prices and capable management.",
-        readiness: "Not yet secured",
-        question: "Can a diversified portfolio generate the assumed cash yield?",
-        pos: [0.18, 0.68],
-        kind: 2,
-    },
-    Node {
-        name: "Cash reserve",
-        short: "Cash reserve",
-        purpose: "Maintain liquidity for vehicle obligations. Reserves do not silently increase library awards.",
-        inputs: "Subscribed equity at opening; retained investment proceeds for replenishment.",
-        outputs: "Funding for vehicle operating deficits, subject to the available balance.",
-        owner: "Proposed governing board; investment manager administers",
-        dependencies: "An agreed reserve policy and sufficient available cash.",
-        readiness: "Proposed policy",
-        question: "What target and payment-timing safeguards are appropriate?",
-        pos: [0.51, 0.76],
-        kind: 3,
-    },
-    Node {
-        name: "Library allocation committee",
-        short: "Allocation committee",
-        purpose: "Assess eligible applications using published criteria and recommend capped awards.",
-        inputs: "Available library pool, verified applications, disclosed conflicts.",
-        outputs: "Proposed awards, reasons, appeal decisions and reporting requirements.",
-        owner: "Proposed independent library allocation committee",
-        dependencies: "Eligibility consultation, independently checked gaps and appeals procedures.",
-        readiness: "Proposed policy",
-        question: "How should representation, scoring and independence be established?",
-        pos: [0.67, 0.26],
-        kind: 4,
-    },
-    Node {
-        name: "Participating library systems",
-        short: "Eligible libraries",
-        purpose: "Receive approved funding under proposed distribution agreements while retaining public assets and service control.",
-        inputs: "Cash-supported awards; existing revenues used only to establish gaps.",
-        outputs: "Agreed services and recipient use-of-funds reports.",
-        owner: "Participating library boards, if participation is agreed",
-        dependencies: "Participation agreements, actual service needs and local authority.",
-        readiness: "Not yet secured",
-        question: "Which libraries wish to participate and on what terms?",
-        pos: [0.84, 0.52],
+        name: "The long-term fund",
+        short: "Long-term fund",
+        purpose: "Hold and manage donated assets for the stated purpose of supporting Saskatchewan libraries.",
+        inputs: "Donated principal, additional corporate gifts and interest income.",
+        outputs: "The proposed 50% library share of net interest, with 50% reinvested and reserve and gift restrictions respected.",
+        owner: "Proposed trustees or governing board; assets are not personally owned by them",
+        dependencies: "Legal structure, professional investment mandate, spending policy and donor restrictions.",
+        readiness: "Proposed; structure unresolved",
+        question: "What structure and spending policy could balance present support and future capacity?",
         kind: 5,
     },
     Node {
-        name: "Community service outcomes",
-        short: "Community access",
-        purpose: "Support locally identified access to reading, learning, connectivity and library services.",
-        inputs: "Library services supported by approved awards.",
-        outputs: "Reported service outcomes, with community feedback.",
-        owner: "Participating library boards and service teams",
-        dependencies: "Available awards, local priorities, staffing and service capacity.",
-        readiness: "Illustrative assumption",
-        question: "Which measurable outcomes are useful and proportionate to report?",
-        pos: [0.78, 0.82],
+        name: "Saskatchewan communities",
+        short: "Communities",
+        purpose: "Help identify practical service priorities across urban, rural, northern and remote contexts.",
+        inputs: "Local experience, consultation and evidence of access barriers.",
+        outputs: "Locally identified needs and feedback on service outcomes.",
+        owner: "Community members and appropriate library authorities",
+        dependencies: "Inclusive consultation, including appropriate engagement with Indigenous communities.",
+        readiness: "Illustrative relationships; no participation agreed",
+        question: "Whose needs are missing from the evidence, and how will their voices be heard?",
+        kind: 6,
+    },
+    Node {
+        name: "Reserves & future capacity",
+        short: "Future capacity",
+        purpose: "Retain part of available resources to support resilience and the fund's purchasing power over time.",
+        inputs: "Retained investment proceeds and approved reserve arrangements.",
+        outputs: "A buffer against variability, subject to losses, costs and policy limits.",
+        owner: "Proposed governing board with professional advice",
+        dependencies: "Spending, liquidity and reserve policies compatible with gift terms.",
+        readiness: "Policy requires assessment",
+        question: "How should current grants adjust when markets weaken or costs rise?",
+        kind: 3,
+    },
+    Node {
+        name: "Oversight & fair allocation",
+        short: "Oversight",
+        purpose: "Safeguard purpose and donor restrictions while making transparent, evidence-based award decisions.",
+        inputs: "Accounts, investment reports, eligible applications and disclosed conflicts.",
+        outputs: "Documented decisions, published criteria, independent review and public reporting.",
+        owner: "Proposed governing board and independent allocation reviewers",
+        dependencies: "Clear delegated responsibilities, conflict controls, appeals and reporting standards.",
+        readiness: "Governance arrangements proposed",
+        question: "How will decisions be independently checked and explained?",
+        kind: 4,
+    },
+    Node {
+        name: "Eligible libraries",
+        short: "Libraries",
+        purpose: "Receive approved support while retaining their existing ownership, governance and authority over library services.",
+        inputs: "Donor-compatible grants and documented service needs.",
+        outputs: "Local service delivery and proportionate use-of-funds reporting.",
+        owner: "The appropriate library boards and service authorities",
+        dependencies: "Published eligibility, confirmed participation and grant agreements.",
+        readiness: "No library participation claimed",
+        question: "Which library needs are verified, eligible and consistent with donor restrictions?",
+        kind: 5,
+    },
+    Node {
+        name: "Practical service outcomes",
+        short: "Service outcomes",
+        purpose: "Connect funding to opening hours, staffing, collections, digital access, accessibility and programming.",
+        inputs: "Approved grants, library expertise and locally agreed priorities.",
+        outputs: "Evidence of services supported and community feedback, without collecting patron data.",
+        owner: "Appropriate library authorities and service teams",
+        dependencies: "Available funding, feasible plans and agreed measures.",
+        readiness: "Illustrative outcomes, not promised results",
+        question: "What changes would communities value, and how could those changes be reported?",
         kind: 6,
     },
 ];
@@ -125,251 +175,164 @@ pub struct Role {
     pub decisions: &'static str,
     pub controls: &'static str,
 }
-pub const ROLES: [Role; 7] = [
+pub const ROLES: [Role; 6] = [
     Role {
-        title: "Governing board / trustees",
-        mandate: "Accountability for the proposed vehicle and its governing agreements.",
-        decisions: "Set reserve policy; approve investor distribution terms under governing agreements; authorize payments through dual sign-off; establish library eligibility after consultation; approve changes only through the agreed consent process.",
-        controls: "Review conflicts and related-party transactions through independent members, with recusals, minutes and disclosure. No protection is legally established until governing documents provide it.",
+        title: "Trustees / governing board",
+        mandate: "Oversee the fund's purpose and assets; trustees do not personally own those assets.",
+        decisions: "Approve investment, spending, reserve, gift-acceptance and allocation policies within the eventual legal structure. Monitor risk, costs and liquidity.",
+        controls: "Respect donor restrictions; separate ledgers; documented approvals; dual payment authorization; succession planning; publish accounts and policy decisions.",
     },
     Role {
-        title: "Investment manager",
-        mandate: "Steward the commercial portfolio and maintain cash forecasts.",
-        decisions: "Source businesses, perform due diligence, oversee management, recommend reinvestment and prepare cash-supported payment schedules.",
-        controls: "Publish fees, related interests, performance and valuations. Reporting failures trigger escalation to the board and suspension of discretionary approvals.",
+        title: "Professional investment management",
+        mandate: "Manage assets within a professionally established mandate. Money-market-style investing is the working approach; specific instruments and mandate require professional assessment.",
+        decisions: "Advise on diversification, liquidity, responsible investment, performance measurement, costs and implementation of approved grants.",
+        controls: "Transparent fees, appropriate custody, independent reporting, periodic mandate review and oversight by the governing board.",
     },
     Role {
-        title: "Investment committee",
-        mandate: "Provide independent scrutiny of proposed acquisitions and portfolio risk.",
-        decisions: "Approve acquisitions within a documented board mandate; review concentration, operating risks and independent valuation evidence.",
-        controls: "No conflicted member votes. Material transactions or mandate exceptions return to the board.",
+        title: "Allocation reviewers",
+        mandate: "Apply published criteria to verified, eligible needs within available and donor-compatible resources.",
+        decisions: "Document scoring, recommend awards, give written reasons and provide a fair review or appeal route.",
+        controls: "Disclose conflicts; recuse affected reviewers; separate assessment from payment approval; publish understandable allocation results.",
     },
     Role {
-        title: "Library allocation committee",
-        mandate: "Apply the published eligibility and allocation rules independently.",
-        decisions: "Approve library awards within the available pool and delegated mandate; document scoring; provide reasons; refer appeals to an independent review panel.",
-        controls: "Recuse members with applicant interests. Publish criteria and allocation results, subject to appropriate confidentiality.",
+        title: "Library authorities",
+        mandate: "Retain existing ownership and governance arrangements, including decisions about library services.",
+        decisions: "Identify needs, set service priorities, accept appropriate grant terms, deliver services and report use of support.",
+        controls: "Proportionate reporting, local accountability, privacy protection and respect for library independence.",
     },
     Role {
-        title: "Participating library boards",
-        mandate: "Retain authority over library assets, services and local priorities.",
-        decisions: "Submit substantiated funding gaps, accept funding agreements and review recipient use of funds and service outcomes.",
-        controls: "Report use of funds and variances. Reporting failures trigger review, remediation and potentially future-payment suspension under agreed terms.",
+        title: "Independent oversight",
+        mandate: "Provide independent scrutiny of financial reporting, controls and use of restricted funds.",
+        decisions: "Agree an appropriate external audit or review scope, report findings and track remediation.",
+        controls: "Independence from management and award decisions. The proposed review does not guarantee future funding or performance.",
     },
     Role {
-        title: "Independent auditor",
-        mandate: "Provide independent verification of financial reporting within an agreed audit scope.",
-        decisions: "Audit vehicle accounts and examine cash-source and use reconciliation; report findings to the governing board.",
-        controls: "Independent appointment, access to records and disclosed findings. An audit does not guarantee future performance.",
-    },
-    Role {
-        title: "Legal and tax advisers",
-        mandate: "Assess structure, documentation, tax and regulatory obligations.",
-        decisions: "Review investor rights, offering requirements, legal enforceability, library agreements and the tax model before commitments.",
-        controls: "Written professional assessment is not yet obtained. Preferred returns, carried interest and redemptions require revised modelling if introduced.",
+        title: "Legal and charitable advisers",
+        mandate: "Determine an appropriate Canadian legal and charitable structure and assess applicable requirements.",
+        decisions: "Review charitable eligibility, receipting, grant eligibility, investment powers, spending requirements, gift terms and governance documents before launch.",
+        controls: "Written professional advice and documented decisions. No charitable tax receipts are promised before relevant status and arrangements are established.",
     },
 ];
 pub struct Evidence {
     pub claim: &'static str,
     pub status: &'static str,
     pub detail: &'static str,
-    pub owner: &'static str,
-    pub source: &'static str,
-    pub date: &'static str,
     pub next: &'static str,
+    pub source: &'static str,
 }
-pub const EVIDENCE: [Evidence; 13] = [
+pub const EVIDENCE: [Evidence; 8] = [
     Evidence {
-        claim: "Saskatchewan has municipal, regional and northern library structures",
-        status: "Verified external information",
-        detail: "The provincial government describes four municipal library systems, seven regional systems, a federation of northern libraries, and the Provincial Library and Literacy Office. Wapiti is listed as a regional library serving northeast Saskatchewan. This establishes public context only; it does not establish funding gaps, participation or endorsement.",
-        owner: "Proposal research / proposed library working group",
+        claim: "Money-market-style approach",
+        status: "Working approach",
+        detail: "The proposal would seek interest income from professionally selected money-market-style instruments. These are investment products; low rates can fail to keep pace with inflation. No product, yield or principal guarantee is promised.",
+        next: "Obtain advice on suitable instruments, liquidity, custody, costs and risk before investing donated assets.",
+        source: "https://www.investright.org/understand-investing/types-of-investments/common-investments/mutual-funds/",
+    },
+    Evidence {
+        claim: "Provincial library context",
+        status: "External context",
+        detail: "The Government of Saskatchewan describes municipal, regional and northern library arrangements. That context does not establish any funding gap, participation or endorsement.",
+        next: "Consult appropriate library authorities and gather current service and budget evidence.",
         source: "https://www.saskatchewan.ca/residents/education-and-learning/library-system-in-saskatchewan",
-        date: "18 November 2026",
-        next: "Consult the relevant library boards and communities; obtain current service and funding-gap evidence separately.",
     },
     Evidence {
-        claim: "Investor capital is not secured",
-        status: "Not yet secured",
-        detail: "CA$250 million is an illustration, not a subscription or commitment.",
-        owner: "Proposed governing board",
-        source: "Project brief / concept assumption",
-        date: "Not externally verified",
-        next: "Assess investor appetite; obtain appropriate advice and executed agreements before any capitalization.",
+        claim: "Legal and charitable structure",
+        status: "Open decision",
+        detail: "Trust is a working description. No legal structure or charitable status is established by this proposal.",
+        next: "Obtain Canadian professional advice on the appropriate structure and obligations.",
+        source: "",
     },
     Evidence {
-        claim: "Portfolio acquisitions are not selected",
-        status: "Not yet secured",
-        detail: "Business examples are fictional and do not form the calculator portfolio.",
-        owner: "Proposed investment manager",
-        source: "Synthetic demonstration data",
-        date: "Not externally verified",
-        next: "Identify candidates and independently assess commercial, operational and acquisition economics.",
+        claim: "Tax receipts",
+        status: "Open decision",
+        detail: "CRA explains that qualified donees may issue official donation receipts. This demo makes no claim that the proposed fund is qualified and promises no receipts.",
+        next: "Establish applicable status and gift/receipting arrangements before making representations.",
+        source: "https://www.canada.ca/en/revenue-agency/services/charities-giving/giving-charity-information-donors/before-you-give.html",
     },
     Evidence {
-        claim: "Library participation is not agreed",
-        status: "Not yet secured",
-        detail: "All six applicant profiles are synthetic; no actual institution's budget or participation is asserted.",
-        owner: "Proposed library allocation committee",
-        source: "Synthetic demonstration data",
-        date: "Not externally verified",
-        next: "Consult potential participants and establish actual funding gaps and eligibility.",
+        claim: "Needs and library participation",
+        status: "Not established",
+        detail: "No provincial funding gap or library participation is verified here. Service profiles are illustrative.",
+        next: "Invite consultation and verify local needs, eligibility and consent before considering grants.",
+        source: "",
     },
     Evidence {
-        claim: "Residual split is illustrative: 50 / 20 / 30",
-        status: "Illustrative assumption",
-        detail: "Investor / library / reinvestment shares apply only after costs, tax provision and reserve replenishment. Custom shares are scenario changes, not agreed policy.",
-        owner: "Proposed governing board",
-        source: "User-supplied project brief",
-        date: "Not externally verified",
-        next: "Assess acceptability to investors and libraries; incorporate accepted terms into governing agreements.",
+        claim: "Donations and donor restrictions",
+        status: "Not established",
+        detail: "The proposed principal fundraising target is CA$250 million, raised through corporate donations. No gifts or donor commitments are represented as secured or collected.",
+        next: "Develop a gift-acceptance policy and separate restricted-capital and immediate-use accounting.",
+        source: "",
     },
     Evidence {
-        claim: "Legal structure remains unresolved",
-        status: "Requires professional assessment",
-        detail: "Saskatchewan Library Sustainability Trust was a working title only. No trust or investment vehicle is represented as established.",
-        owner: "Legal advisers",
-        source: "No professional opinion obtained",
-        date: "Not assessed",
-        next: "Assess Canadian structure, securities, governance and library distribution arrangements.",
+        claim: "Investment and spending policies",
+        status: "Open decision",
+        detail: "Money-market-style investment is the working approach. Specific instruments, costs, reserves and legal suitability require assessment; the proposed net-interest split is 50% for libraries and 50% reinvested. Scenario rates are hypothetical and editable, not quoted market yields.",
+        next: "Assess risks, liquidity, inflation, allowable capital spending and applicable distribution requirements.",
+        source: "",
     },
     Evidence {
-        claim: "Vehicle tax treatment remains unresolved",
-        status: "Requires professional assessment",
-        detail: "The 20% provision is a simplified modelling placeholder, not Canadian tax advice.",
-        owner: "Tax advisers",
-        source: "No professional opinion obtained",
-        date: "Not assessed",
-        next: "Determine actual entity and investor-level treatment and revise the model accordingly.",
-    },
-    Evidence {
-        claim: "Financial sustainability is not established",
-        status: "Illustrative assumption",
-        detail: "The model is one annual cash period. Yield assumptions are not forecasts; no capital preservation or payments are guaranteed.",
-        owner: "Proposed investment committee",
-        source: "Local calculation from supplied assumptions",
-        date: "Not externally verified",
-        next: "Validate acquisition pricing, cash conversion, fees, losses and multi-year stress behaviour independently.",
-    },
-    Evidence {
-        claim: "Government and library endorsement not obtained",
-        status: "Not yet secured",
-        detail: "Sharing this proposal with a director, attorney or MLA is for review and does not constitute endorsement.",
-        owner: "Proposal sponsor",
-        source: "No endorsement documented",
-        date: "Not externally verified",
-        next: "Record any future feedback accurately and obtain permission before attributing support.",
-    },
-    Evidence {
-        claim: "No borrowing or new public funding in baseline",
-        status: "Proposed policy",
-        detail: "Private equity and proceeds from privately owned businesses only. No donations, crowdfunding, sponsorship revenue or library user charges.",
-        owner: "Proposed governing board",
-        source: "User-supplied proposal boundaries",
-        date: "Not externally verified",
-        next: "Confirm the mandate in proposed investment and distribution agreements.",
-    },
-    Evidence {
-        claim: "Public library assets remain outside investor collateral",
-        status: "Proposed policy",
-        detail: "Buildings, collections, patron information and public services are not transferred to investors or pledged as collateral.",
-        owner: "Legal advisers and library boards",
-        source: "User-supplied proposal boundaries",
-        date: "Not assessed",
-        next: "Confirm enforceable boundaries and data responsibilities in the final agreements.",
-    },
-    Evidence {
-        claim: "Allocation rules require consultation",
-        status: "Proposed policy",
-        detail: "Equal capped baseline followed by weighted unmet need, capped awards and redistribution. All applicant fields are synthetic.",
-        owner: "Proposed library allocation committee",
-        source: "Demonstration allocation specification",
-        date: "Not externally verified",
-        next: "Consult communities and library boards on eligibility, weights, evidence and appeals.",
-    },
-    Evidence {
-        claim: "GitHub Pages is static website hosting",
-        status: "Verified external information",
-        detail: "The delivery service supports this browser demo. This verifies the hosting description only, not the financial proposal. GitHub records visitor IP addresses for security; this application has no analytics or input collection.",
-        owner: "Technical maintainer",
-        source: "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
-        date: "18 November 2026",
-        next: "Recheck hosting access and privacy requirements before sharing sensitive material.",
+        claim: "Governance and reporting",
+        status: "Proposed",
+        detail: "Roles, conflicts controls, allocation criteria, independent oversight and reporting are proposals, not operating arrangements.",
+        next: "Approve governing documents, responsibilities, reporting standards and an independent review process.",
+        source: "",
     },
 ];
-pub struct Stage {
-    pub title: &'static str,
-    pub prerequisite: &'static str,
-    pub deliverables: &'static str,
-    pub owner: &'static str,
-    pub gate: &'static str,
+pub const STAGES: [(&str, &str); 5] = [
+    (
+        "Listen and establish needs",
+        "Consult library authorities and communities; substantiate service gaps and participation preferences. No engagement is represented as completed.",
+    ),
+    (
+        "Determine the structure",
+        "Obtain legal and charitable advice, define the purpose and confirm governance and receipting arrangements. Trust remains a working description.",
+    ),
+    (
+        "Set stewardship policies",
+        "Approve gift restrictions, investment management, spending, reserves, costs, controls and independent oversight.",
+    ),
+    (
+        "Establish fair grant arrangements",
+        "Publish eligibility, evidence requirements, allocation criteria, reasons, appeals and use-of-funds reporting. Respect library service authority.",
+    ),
+    (
+        "Consider a separate future launch",
+        "Only after approvals and operational readiness would donation collection or grantmaking be considered. This local demonstration does neither.",
+    ),
+];
+pub const TOUR: [(usize, &str, &str); 5] = [
+    (0, "Why a lasting fund?", QUESTIONS[0].1),
+    (2, "Donations build shared capacity", QUESTIONS[1].1),
+    (3, "Balance present and future support", QUESTIONS[2].1),
+    (5, "Reach communities fairly", QUESTIONS[3].1),
+    (6, "Make oversight visible", QUESTIONS[4].1),
+];
+
+pub fn narrative_text() -> String {
+    let mut t = format!(
+        "{TITLE}\n\n{MESSAGE}\n\n{TARGET_MESSAGE}\n\n{QUALIFICATION}\n\nCorporate donations → Long-term principal fund → Interest income → Library support + reinvestment\n50% of net interest supports libraries and 50% is reinvested. Performance and funding vary.\n"
+    );
+    for (q, a, _) in QUESTIONS {
+        t.push_str(&format!("\n{q}\n{a}\n"));
+    }
+    t.push_str("\nOWNERSHIP AND GIFT TERMS\nDonors receive no shares, equity, repayment rights or investment returns. The proposed fund holds and manages donated assets for its stated purpose. Trustees oversee those assets; they do not personally own them. Libraries retain their existing ownership, governance and service decisions. Long-term capital gifts and immediate-use gifts are kept separate and used according to donor restrictions. No tax receipts are promised.\n\nILLUSTRATIVE OUTCOMES\n");
+    for (title, body) in OUTCOMES {
+        t.push_str(&format!("{title}: {body}\n"));
+    }
+    for r in ROLES {
+        t.push_str(&format!(
+            "\n{}\n{}\n{}\n{}\n",
+            r.title, r.mandate, r.decisions, r.controls
+        ));
+    }
+    for e in EVIDENCE {
+        t.push_str(&format!(
+            "\n{} — {}\n{}\nNext: {}\n{}\n",
+            e.claim, e.status, e.detail, e.next, e.source
+        ));
+    }
+    for (title, body) in STAGES {
+        t.push_str(&format!("\n{title}\n{body}\n"));
+    }
+    t
 }
-pub const STAGES: [Stage; 5] = [
-    Stage {
-        title: "Provincial needs assessment",
-        prerequisite: "Agreement on consultation scope and respectful engagement with potential participants.",
-        deliverables: "Funding-gap dataset; service priorities; potential participant consultation. No synthetic budget may substitute for verified need.",
-        owner: "Proposed library working group and proposal sponsor",
-        gate: "Is there a documented provincial requirement and a credible basis for eligibility?",
-    },
-    Stage {
-        title: "Structure and commercial terms",
-        prerequisite: "A documented needs assessment and initial investor appetite discussions.",
-        deliverables: "Structure options; investor rights; proposed distribution agreements; governance design; reserve and liquidity policies.",
-        owner: "Legal and tax advisers, proposed governing board",
-        gate: "Can proposed terms meet legal requirements and be acceptable to both investors and participating libraries?",
-    },
-    Stage {
-        title: "Feasibility and independent assessment",
-        prerequisite: "Defined structure options and testable commercial assumptions.",
-        deliverables: "Acquisition economics; investor appetite assessment; financial stress testing; legal and tax review.",
-        owner: "Proposed investment committee and independent professional advisers",
-        gate: "Does independently reviewed evidence justify proceeding, revising or stopping?",
-    },
-    Stage {
-        title: "Capitalization and acquisitions",
-        prerequisite: "Feasibility gate passed; finalized documents; all required approvals and disclosures.",
-        deliverables: "Executed agreements; subscribed private equity; completed due diligence; acquired businesses; funded reserve.",
-        owner: "Proposed governing board and investment manager",
-        gate: "Are capital, controls, businesses and the required reserve actually in place?",
-    },
-    Stage {
-        title: "Library distributions and monitoring",
-        prerequisite: "Positive available cash, approved eligibility and executed recipient agreements.",
-        deliverables: "Cash-supported awards; service reporting; audited accounts; review of allocation effectiveness and payment timing.",
-        owner: "Proposed allocation committee, library boards and independent auditor",
-        gate: "Do verified cash and recipient reporting support each payment and continued operation?",
-    },
-];
-pub const TOUR: [(usize, &str, &str); 6] = [
-    (
-        0,
-        "A provincial requirement",
-        "Begin with the funding need. Urban, rural, northern and remote contexts require consultation. The CA$5 million annual need is illustrative, not an established provincial shortfall.",
-    ),
-    (
-        2,
-        "Own productive businesses",
-        "Private investors would own interests in a proposed holding vehicle, which would own commercial businesses. Libraries would receive funding through separate agreements.",
-    ),
-    (
-        3,
-        "Follow available cash",
-        "Business cash first pays additional vehicle costs and the tax placeholder, then replenishes reserves. Only remaining positive cash is split among investors, libraries and reinvestment.",
-    ),
-    (
-        4,
-        "Test weaker conditions",
-        "Select lower or no business distributions. Watch library awards stop as cash is insufficient. Reserves cover vehicle deficits only; unfunded deficits remain visible.",
-    ),
-    (
-        5,
-        "Allocate fairly; oversee independently",
-        "The available pool is divided using a capped baseline and weighted needs. Synthetic applicants show the method. Proposed independent roles, conflicts controls and appeals need agreement.",
-    ),
-    (
-        7,
-        "Evidence before commitments",
-        "Capital is unsecured, acquisitions are unselected, participation is unagreed, and legal and tax treatment are unresolved. Review these items before any commitment.",
-    ),
-];

@@ -1,41 +1,40 @@
--- Independent, executable Unison specification of the proposed cash policy.
--- Currency values are CAD; rates are fractions. This validates the specified
--- base and stress results independently of the interactive Rust engine.
+-- Independent one-period grant-cap and separate-donation-ledger specification.
+-- Hypothetical values only. No tax or investment strategy is assumed.
 use Float + - *
-
 positive : Float -> Float
 positive x = if Float.gt x 0.0 then x else 0.0
-
 lesser : Float -> Float -> Float
 lesser a b = if Float.lt a b then a else b
+greater : Float -> Float -> Float
+greater a b = if Float.gt a b then a else b
 
-cashPolicy : Float -> Float -> Float -> Float -> Float -> Float -> Float -> [Float]
-cashPolicy capital reserve yield management administration tax target =
-  invested = capital - reserve
-  received = invested * yield
-  fees = invested * management
-  beforeTax = received - fees - administration
-  provision = positive beforeTax * tax
-  afterTax = beforeTax - provision
-  deficit = positive (0.0 - afterTax)
-  draw = lesser reserve deficit
-  unfunded = deficit - draw
-  afterDeficit = reserve - draw
-  topup = lesser (positive afterTax) (positive (target - afterDeficit))
-  residual = positive (afterTax - topup)
-  [residual * 0.5, residual * 0.2, residual * 0.3, afterDeficit + topup, draw, unfunded]
+grantPolicy : Float -> Float -> Float -> Float -> Float -> Float -> Float -> Float -> Float -> [Float]
+grantPolicy opening gifts performance costs protectedFloor reserveRate spendingRate need immediate =
+  assets = positive ((opening + gifts) * (1.0 + performance) - costs)
+  floor = greater protectedFloor (opening * reserveRate)
+  available = positive (assets - floor)
+  immediateGrant = lesser immediate need
+  grant = lesser (opening * spendingRate) (lesser available (positive (need - immediateGrant)))
+  [grant, immediateGrant, assets - grant, immediate - immediateGrant]
 
-baseResult = cashPolicy 250000000.0 5000000.0 0.08 0.015 500000.0 0.2 10000000.0
-lowerResult = cashPolicy 250000000.0 5000000.0 0.04 0.015 500000.0 0.2 10000000.0
-zeroResult = cashPolicy 250000000.0 5000000.0 0.0 0.015 500000.0 0.2 10000000.0
-deficitResult = cashPolicy 250000000.0 500000.0 0.0 0.015 500000.0 0.2 10000000.0
+normal = grantPolicy 1000.0 0.0 0.1 20.0 1000.0 0.1 0.05 500.0 0.0
+loss = grantPolicy 1000.0 0.0 (-0.2) 20.0 1000.0 0.1 0.05 500.0 0.0
+permittedCapital = grantPolicy 1000.0 0.0 0.0 0.0 0.0 0.1 0.05 500.0 0.0
+separateImmediate = grantPolicy 1000.0 0.0 0.1 20.0 1000.0 0.1 0.05 500.0 800.0
 
-> baseResult
-> lowerResult
-> zeroResult
-> deficitResult
+test> grantCap = if normal == [50.0, 0.0, 1030.0, 0.0] then [Ok "Grant respects spending target"] else [Fail "Grant cap mismatch"]
+test> lossRestriction = if loss == [0.0, 0.0, 780.0, 0.0] then [Ok "Loss does not release principal for grants"] else [Fail "Loss restriction mismatch"]
+test> capitalTerms = if permittedCapital == [50.0, 0.0, 950.0, 0.0] then [Ok "Explicit gift terms allow capital use"] else [Fail "Capital-use mismatch"]
+test> separateLedgers = if separateImmediate == [0.0, 500.0, 1080.0, 300.0] then [Ok "Immediate carryover stays separate"] else [Fail "Separate ledger mismatch"]
 
-test> basePolicy = if baseResult == [3670000.0, 1468000.0, 2202000.0, 10000000.0, 0.0, 0.0] then [Ok "Base cash waterfall"] else [Fail "Base cash waterfall mismatch"]
-test> lowerPolicy = if lowerResult == [0.0, 0.0, 0.0, 9500000.0, 0.0, 0.0] then [Ok "Lower yield retains all positive cash"] else [Fail "Lower yield mismatch"]
-test> zeroPolicy = if zeroResult == [0.0, 0.0, 0.0, 825000.0, 4175000.0, 0.0] then [Ok "Zero income draws reserve for costs only"] else [Fail "Zero income mismatch"]
-test> deficitPolicy = if deficitResult == [0.0, 0.0, 0.0, 0.0, 500000.0, 3742500.0] then [Ok "Unfunded operating deficit remains visible"] else [Fail "Unfunded deficit mismatch"]
+interestPolicy : Float -> Float -> Float -> Float -> Float -> Float -> Float -> [Float]
+interestPolicy opening interest costs share reserveRate protectedFloor need =
+  gross = opening * interest
+  net = positive (gross - costs)
+  assets = positive (opening + gross - costs)
+  floor = greater protectedFloor (opening * reserveRate)
+  grant = lesser (net * share) (lesser need (positive (assets - floor)))
+  [grant, net - grant, assets - grant]
+
+interestExample = interestPolicy 1000.0 0.1 20.0 0.5 0.1 1000.0 500.0
+test> interestSharing = if interestExample == [40.0, 40.0, 1040.0] then [Ok "Net interest supports libraries and reinvestment"] else [Fail "Interest sharing mismatch"]
