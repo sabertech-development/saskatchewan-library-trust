@@ -1,221 +1,203 @@
-Saskatchewan Private Equity Library Funding
-Concept demonstration · Illustrative financial assumptions
+Saskatchewan Library Sustainability Trust
 
-Prepared for discussion, not an investment offering. No commitments are collected.
+Building a lasting fund for Saskatchewan libraries through donations, responsible investment, and transparent community support.
 
-PROPOSED MECHANISM
-Private equity subscriptions -> interests in a proposed vehicle -> ownership of operating businesses -> available cash -> investors, library agreements and retained reinvestment.
+A proposed CA$250 million principal fund, raised through corporate donations. This is a fundraising target, not money already secured.
 
-CURRENT ILLUSTRATIVE INPUTS (CAD)
-Total subscribed equity: CA$250,000,000
-Opening cash reserve: CA$5,000,000
-Opening invested business equity: CA$245,000,000
-Business cash yield: 8.00% of invested equity
-Management cost: 1.50% of invested equity
-Annual administration: CA$500,000
-Vehicle tax provision: 20.00% (placeholder)
-Required reserve: CA$10,000,000
-Illustrative annual library need: CA$5,000,000
-Residual shares: 50.0% investors / 20.0% libraries / 30.0% reinvestment
+“Trust” is a working description. The appropriate Canadian legal and charitable structure remains to be determined. No charitable status, secured donations, library participation, endorsements or approved legal structure are claimed. No tax receipts are promised.
 
-ANNUAL OUTPUTS (CAD)
-Business cash received: CA$19,600,000
-Management costs: CA$3,675,000
-Administration: CA$500,000
-Tax provision: CA$3,085,000
-Reserve replenishment: CA$5,000,000
-Reserve draw for operating deficit: CA$0
-Residual cash: CA$7,340,000
-Investor distribution: CA$3,670,000
-Library allocation: CA$1,468,000
-Retained reinvestment: CA$2,202,000
-Closing reserve: CA$10,000,000
-Remaining library funding gap: CA$3,532,000
-Unfunded operating deficit: CA$0
-Funding need covered: 29.36%
-Investor cash yield on subscribed equity: 1.468%
+Corporate donations → Long-term principal fund → Interest income → Library support + reinvestment
+50% of net interest supports libraries and 50% is reinvested. Performance and funding vary.
 
-BOUNDARIES
-Private equity and privately owned business proceeds only. No borrowing, new government funding, donations, crowdfunding, sponsorship revenue or library user charges. Library assets, services and patron information are not transferred or pledged. No returns, capital preservation or payments are guaranteed. Existing library revenues only establish funding gaps.
+Why a lasting funding source?
+Libraries plan services over many years. A supplementary long-term fund could help sustain access as needs and costs change. Actual funding gaps still need local evidence.
 
-MODEL LIMITS
-Business cash is after business-level operating costs, taxes, maintenance capital expenditure and working capital. Vehicle costs are additional. Tax is a placeholder. New subscriptions, unrealized gains, exits and capital returns are excluded. Investor cash yield is not total return or IRR.
+How do donations build the fund?
+Corporate donations build a proposed CA$250 million principal fund. Donors receive no shares, equity, repayment rights or investment returns. Immediate-use gifts are accounted for separately.
 
-EVIDENCE REGISTER
+How could support last?
+Invest donated principal using a professionally reviewed money-market-style approach. The proposed split sends 50% of net interest to libraries and reinvests 50%. Rates, funding and purchasing power vary.
 
-Saskatchewan has municipal, regional and northern library structures [Verified external information]
-The provincial government describes four municipal library systems, seven regional systems, a federation of northern libraries, and the Provincial Library and Literacy Office. Wapiti is listed as a regional library serving northeast Saskatchewan. This establishes public context only; it does not establish funding gaps, participation or endorsement.
-Owner: Proposal research / proposed library working group
-Source: https://www.saskatchewan.ca/residents/education-and-learning/library-system-in-saskatchewan
-Checked: 18 November 2026
-Next: Consult the relevant library boards and communities; obtain current service and funding-gap evidence separately.
+How would communities benefit fairly?
+Published eligibility, documented needs, donor-compatible awards and an appeal process would connect support to local priorities.
 
-Investor capital is not secured [Not yet secured]
-CA$250 million is an illustration, not a subscription or commitment.
-Owner: Proposed governing board
-Source: Project brief / concept assumption
-Checked: Not externally verified
-Next: Assess investor appetite; obtain appropriate advice and executed agreements before any capitalization.
+Who would oversee the money?
+Trustees or a governing board would oversee purpose, restrictions and professional management. Library authorities retain their service decisions.
 
-Portfolio acquisitions are not selected [Not yet secured]
-Business examples are fictional and do not form the calculator portfolio.
-Owner: Proposed investment manager
-Source: Synthetic demonstration data
-Checked: Not externally verified
-Next: Identify candidates and independently assess commercial, operational and acquisition economics.
+OWNERSHIP AND GIFT TERMS
+Donors receive no shares, equity, repayment rights or investment returns. The proposed fund holds and manages donated assets for its stated purpose. Trustees oversee those assets; they do not personally own them. Libraries retain their existing ownership, governance and service decisions. Long-term capital gifts and immediate-use gifts are kept separate and used according to donor restrictions. No tax receipts are promised.
 
-Library participation is not agreed [Not yet secured]
-All six applicant profiles are synthetic; no actual institution's budget or participation is asserted.
-Owner: Proposed library allocation committee
-Source: Synthetic demonstration data
-Checked: Not externally verified
-Next: Consult potential participants and establish actual funding gaps and eligibility.
+ILLUSTRATIVE OUTCOMES
+Opening hours: Illustrative use: maintain evening or weekend access where locally needed.
+Staffing: Illustrative use: support staff capacity for reliable public service.
+Collections: Illustrative use: refresh books, local resources and accessible formats.
+Digital access: Illustrative use: provide public computers, connectivity and digital learning.
+Accessibility: Illustrative use: reduce physical, sensory and communication barriers.
+Programming: Illustrative use: support community-led reading, learning and cultural activities.
 
-Residual split is illustrative: 50 / 20 / 30 [Illustrative assumption]
-Investor / library / reinvestment shares apply only after costs, tax provision and reserve replenishment. Custom shares are scenario changes, not agreed policy.
-Owner: Proposed governing board
-Source: User-supplied project brief
-Checked: Not externally verified
-Next: Assess acceptability to investors and libraries; incorporate accepted terms into governing agreements.
+Trustees / governing board
+Oversee the fund's purpose and assets; trustees do not personally own those assets.
+Approve investment, spending, reserve, gift-acceptance and allocation policies within the eventual legal structure. Monitor risk, costs and liquidity.
+Respect donor restrictions; separate ledgers; documented approvals; dual payment authorization; succession planning; publish accounts and policy decisions.
 
-Legal structure remains unresolved [Requires professional assessment]
-Saskatchewan Library Sustainability Trust was a working title only. No trust or investment vehicle is represented as established.
-Owner: Legal advisers
-Source: No professional opinion obtained
-Checked: Not assessed
-Next: Assess Canadian structure, securities, governance and library distribution arrangements.
+Professional investment management
+Manage assets within a professionally established mandate. Money-market-style investing is the working approach; specific instruments and mandate require professional assessment.
+Advise on diversification, liquidity, responsible investment, performance measurement, costs and implementation of approved grants.
+Transparent fees, appropriate custody, independent reporting, periodic mandate review and oversight by the governing board.
 
-Vehicle tax treatment remains unresolved [Requires professional assessment]
-The 20% provision is a simplified modelling placeholder, not Canadian tax advice.
-Owner: Tax advisers
-Source: No professional opinion obtained
-Checked: Not assessed
-Next: Determine actual entity and investor-level treatment and revise the model accordingly.
+Allocation reviewers
+Apply published criteria to verified, eligible needs within available and donor-compatible resources.
+Document scoring, recommend awards, give written reasons and provide a fair review or appeal route.
+Disclose conflicts; recuse affected reviewers; separate assessment from payment approval; publish understandable allocation results.
 
-Financial sustainability is not established [Illustrative assumption]
-The model is one annual cash period. Yield assumptions are not forecasts; no capital preservation or payments are guaranteed.
-Owner: Proposed investment committee
-Source: Local calculation from supplied assumptions
-Checked: Not externally verified
-Next: Validate acquisition pricing, cash conversion, fees, losses and multi-year stress behaviour independently.
+Library authorities
+Retain existing ownership and governance arrangements, including decisions about library services.
+Identify needs, set service priorities, accept appropriate grant terms, deliver services and report use of support.
+Proportionate reporting, local accountability, privacy protection and respect for library independence.
 
-Government and library endorsement not obtained [Not yet secured]
-Sharing this proposal with a director, attorney or MLA is for review and does not constitute endorsement.
-Owner: Proposal sponsor
-Source: No endorsement documented
-Checked: Not externally verified
-Next: Record any future feedback accurately and obtain permission before attributing support.
+Independent oversight
+Provide independent scrutiny of financial reporting, controls and use of restricted funds.
+Agree an appropriate external audit or review scope, report findings and track remediation.
+Independence from management and award decisions. The proposed review does not guarantee future funding or performance.
 
-No borrowing or new public funding in baseline [Proposed policy]
-Private equity and proceeds from privately owned businesses only. No donations, crowdfunding, sponsorship revenue or library user charges.
-Owner: Proposed governing board
-Source: User-supplied proposal boundaries
-Checked: Not externally verified
-Next: Confirm the mandate in proposed investment and distribution agreements.
+Legal and charitable advisers
+Determine an appropriate Canadian legal and charitable structure and assess applicable requirements.
+Review charitable eligibility, receipting, grant eligibility, investment powers, spending requirements, gift terms and governance documents before launch.
+Written professional advice and documented decisions. No charitable tax receipts are promised before relevant status and arrangements are established.
 
-Public library assets remain outside investor collateral [Proposed policy]
-Buildings, collections, patron information and public services are not transferred to investors or pledged as collateral.
-Owner: Legal advisers and library boards
-Source: User-supplied proposal boundaries
-Checked: Not assessed
-Next: Confirm enforceable boundaries and data responsibilities in the final agreements.
+Money-market-style approach — Working approach
+The proposal would seek interest income from professionally selected money-market-style instruments. These are investment products; low rates can fail to keep pace with inflation. No product, yield or principal guarantee is promised.
+Next: Obtain advice on suitable instruments, liquidity, custody, costs and risk before investing donated assets.
+https://www.investright.org/understand-investing/types-of-investments/common-investments/mutual-funds/
 
-Allocation rules require consultation [Proposed policy]
-Equal capped baseline followed by weighted unmet need, capped awards and redistribution. All applicant fields are synthetic.
-Owner: Proposed library allocation committee
-Source: Demonstration allocation specification
-Checked: Not externally verified
-Next: Consult communities and library boards on eligibility, weights, evidence and appeals.
+Provincial library context — External context
+The Government of Saskatchewan describes municipal, regional and northern library arrangements. That context does not establish any funding gap, participation or endorsement.
+Next: Consult appropriate library authorities and gather current service and budget evidence.
+https://www.saskatchewan.ca/residents/education-and-learning/library-system-in-saskatchewan
 
-GitHub Pages is static website hosting [Verified external information]
-The delivery service supports this browser demo. This verifies the hosting description only, not the financial proposal. GitHub records visitor IP addresses for security; this application has no analytics or input collection.
-Owner: Technical maintainer
-Source: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
-Checked: 18 November 2026
-Next: Recheck hosting access and privacy requirements before sharing sensitive material.
+Legal and charitable structure — Open decision
+Trust is a working description. No legal structure or charitable status is established by this proposal.
+Next: Obtain Canadian professional advice on the appropriate structure and obligations.
 
-SYNTHETIC ALLOCATION EXAMPLES
-All applicant data and verified-gap fields are synthetic. Higher scores indicate greater need.
-Baseline CA$100,000. Weights [40.0, 25.0, 20.0, 15.0].
-Example Urban Library A | Urban | Request CA$1,300,000 | Award CA$214,312 | Gap CA$1,085,688 | Score 2.950
-Outcome subject to awarded resources: Retain evening opening and public computer access.
-Example Rural Branch A | Rural | Request CA$650,000 | Award CA$237,562 | Gap CA$412,438 | Score 3.550
-Outcome subject to awarded resources: Maintain weekly opening hours and interlibrary delivery.
-Example Rural Branch B | Rural | Request CA$450,000 | Award CA$208,500 | Gap CA$241,500 | Score 2.800
-Outcome subject to awarded resources: Support shared staffing and accessible reading services.
-Example Northern Library A | Northern | Request CA$1,000,000 | Award CA$276,312 | Gap CA$723,688 | Score 4.550
-Outcome subject to awarded resources: Maintain local staffing and community-selected programming.
-Example Remote Branch A | Remote | Request CA$900,000 | Award CA$293,750 | Gap CA$606,250 | Score 5.000
-Outcome subject to awarded resources: Maintain essential access and reliable material delivery.
-Example Regional Service A | Mixed / regional | Request CA$700,000 | Award CA$237,562 | Gap CA$462,438 | Score 3.550
-Outcome subject to awarded resources: Support mobile services and accessible formats.
-Unallocated: CA$0
 
-PROPOSED RESPONSIBILITIES
+Tax receipts — Open decision
+CRA explains that qualified donees may issue official donation receipts. This demo makes no claim that the proposed fund is qualified and promises no receipts.
+Next: Establish applicable status and gift/receipting arrangements before making representations.
+https://www.canada.ca/en/revenue-agency/services/charities-giving/giving-charity-information-donors/before-you-give.html
 
-Governing board / trustees
-Accountability for the proposed vehicle and its governing agreements.
-Set reserve policy; approve investor distribution terms under governing agreements; authorize payments through dual sign-off; establish library eligibility after consultation; approve changes only through the agreed consent process.
-Review conflicts and related-party transactions through independent members, with recusals, minutes and disclosure. No protection is legally established until governing documents provide it.
+Needs and library participation — Not established
+No provincial funding gap or library participation is verified here. Service profiles are illustrative.
+Next: Invite consultation and verify local needs, eligibility and consent before considering grants.
 
-Investment manager
-Steward the commercial portfolio and maintain cash forecasts.
-Source businesses, perform due diligence, oversee management, recommend reinvestment and prepare cash-supported payment schedules.
-Publish fees, related interests, performance and valuations. Reporting failures trigger escalation to the board and suspension of discretionary approvals.
 
-Investment committee
-Provide independent scrutiny of proposed acquisitions and portfolio risk.
-Approve acquisitions within a documented board mandate; review concentration, operating risks and independent valuation evidence.
-No conflicted member votes. Material transactions or mandate exceptions return to the board.
+Donations and donor restrictions — Not established
+The proposed principal fundraising target is CA$250 million, raised through corporate donations. No gifts or donor commitments are represented as secured or collected.
+Next: Develop a gift-acceptance policy and separate restricted-capital and immediate-use accounting.
 
-Library allocation committee
-Apply the published eligibility and allocation rules independently.
-Approve library awards within the available pool and delegated mandate; document scoring; provide reasons; refer appeals to an independent review panel.
-Recuse members with applicant interests. Publish criteria and allocation results, subject to appropriate confidentiality.
 
-Participating library boards
-Retain authority over library assets, services and local priorities.
-Submit substantiated funding gaps, accept funding agreements and review recipient use of funds and service outcomes.
-Report use of funds and variances. Reporting failures trigger review, remediation and potentially future-payment suspension under agreed terms.
+Investment and spending policies — Open decision
+Money-market-style investment is the working approach. Specific instruments, costs, reserves and legal suitability require assessment; the proposed net-interest split is 50% for libraries and 50% reinvested. Scenario rates are hypothetical and editable, not quoted market yields.
+Next: Assess risks, liquidity, inflation, allowable capital spending and applicable distribution requirements.
 
-Independent auditor
-Provide independent verification of financial reporting within an agreed audit scope.
-Audit vehicle accounts and examine cash-source and use reconciliation; report findings to the governing board.
-Independent appointment, access to records and disclosed findings. An audit does not guarantee future performance.
 
-Legal and tax advisers
-Assess structure, documentation, tax and regulatory obligations.
-Review investor rights, offering requirements, legal enforceability, library agreements and the tax model before commitments.
-Written professional assessment is not yet obtained. Preferred returns, carried interest and redemptions require revised modelling if introduced.
+Governance and reporting — Proposed
+Roles, conflicts controls, allocation criteria, independent oversight and reporting are proposals, not operating arrangements.
+Next: Approve governing documents, responsibilities, reporting standards and an independent review process.
 
-READINESS GATES
 
-Provincial needs assessment
-Prerequisites: Agreement on consultation scope and respectful engagement with potential participants.
-Outputs: Funding-gap dataset; service priorities; potential participant consultation. No synthetic budget may substitute for verified need.
-Owner: Proposed library working group and proposal sponsor
-Gate: Is there a documented provincial requirement and a credible basis for eligibility?
+Listen and establish needs
+Consult library authorities and communities; substantiate service gaps and participation preferences. No engagement is represented as completed.
 
-Structure and commercial terms
-Prerequisites: A documented needs assessment and initial investor appetite discussions.
-Outputs: Structure options; investor rights; proposed distribution agreements; governance design; reserve and liquidity policies.
-Owner: Legal and tax advisers, proposed governing board
-Gate: Can proposed terms meet legal requirements and be acceptable to both investors and participating libraries?
+Determine the structure
+Obtain legal and charitable advice, define the purpose and confirm governance and receipting arrangements. Trust remains a working description.
 
-Feasibility and independent assessment
-Prerequisites: Defined structure options and testable commercial assumptions.
-Outputs: Acquisition economics; investor appetite assessment; financial stress testing; legal and tax review.
-Owner: Proposed investment committee and independent professional advisers
-Gate: Does independently reviewed evidence justify proceeding, revising or stopping?
+Set stewardship policies
+Approve gift restrictions, investment management, spending, reserves, costs, controls and independent oversight.
 
-Capitalization and acquisitions
-Prerequisites: Feasibility gate passed; finalized documents; all required approvals and disclosures.
-Outputs: Executed agreements; subscribed private equity; completed due diligence; acquired businesses; funded reserve.
-Owner: Proposed governing board and investment manager
-Gate: Are capital, controls, businesses and the required reserve actually in place?
+Establish fair grant arrangements
+Publish eligibility, evidence requirements, allocation criteria, reasons, appeals and use-of-funds reporting. Respect library service authority.
 
-Library distributions and monitoring
-Prerequisites: Positive available cash, approved eligibility and executed recipient agreements.
-Outputs: Cash-supported awards; service reporting; audited accounts; review of allocation effectiveness and payment timing.
-Owner: Proposed allocation committee, library boards and independent auditor
-Gate: Do verified cash and recipient reporting support each payment and continued operation?
+Consider a separate future launch
+Only after approvals and operational readiness would donation collection or grantmaking be considered. This local demonstration does neither.
+
+HYPOTHETICAL SCENARIO — NOT SECURED FUNDS OR A FORECAST
+All inputs are editable in the scenario tool. The default opening balance illustrates the proposed fundraising target as if already raised.
+{
+  "capital": 250000000.0,
+  "annual_capital_donations": 0.0,
+  "annual_immediate_donations": 0.0,
+  "interest_rate": 0.03,
+  "library_interest_share": 0.5,
+  "interest_only": true,
+  "return_rate": 0.0,
+  "first_year_return": null,
+  "investment_cost_rate": 0.005,
+  "administration": 100000.0,
+  "inflation": 0.02,
+  "spending_rate": 0.035,
+  "reserve_rate": 0.1,
+  "protect_principal": true,
+  "library_need": 5000000.0,
+  "years": 20
+}
+
+CALCULATION RULES
+
+Target and hypothetical inputs
+The proposed corporate-donation fundraising target is CA$250 million of principal. It is not secured capital. The starting scenario illustrates that target as if already funded; it does not report actual receipts. Every amount and rate is editable. The proposed interest-sharing policy is 50% for libraries and 50% reinvested after costs. Rates and costs are hypothetical, not quoted market rates; edits to the split are scenario comparisons.
+
+Timing and separate gifts
+Opening capital is the balance before year 1. Equal annual donations arrive at the start of each year, including year 1. Donations do not automatically grow with inflation. Immediate-use gifts stay in a separate, uninvested ledger and never fund investment or administration costs.
+
+Interest and capital value
+Gross cash interest = (opening long-term balance + new long-term gifts) × assumed interest yield. Capital value change uses the same base × the separate value-change assumption. The optional first-year shock changes capital value in year 1 only. Total investment return is interest plus capital value change; unrealized gains are not treated as spendable interest.
+
+Costs
+Investment costs = (opening balance + new long-term gifts) × cost rate. Administration rises with inflation from year 2. Costs are paid from long-term assets up to the available balance; unpaid costs are reported. The model assumes permitted cost charges under gift terms. Net interest = max(0, gross cash interest − all costs due). No tax treatment is assumed.
+
+Proposed interest-sharing policy
+The library budget = the editable library percentage × positive net interest after investment and administration costs. Actual grants are further capped by eligible need and assets above the reserve and donor-restriction floors. The remaining net interest is reinvested in the fund. No principal is distributed to donors.
+
+Reinvestment
+Net interest retained = max(0, net interest − actual endowment grants). This includes the reinvestment share and any library budget withheld for reserves, restrictions or lack of eligible need. Retained interest stays inside the closing fund balance; it is not added a second time. Capital losses can outweigh retained interest.
+
+Reserve policy
+The retained reserve floor is the reserve rate × opening long-term balance. It is an accounting retention floor within the fund, not a separate cash account. It is not added to fund assets a second time. Losses or costs can leave the target underfunded.
+
+Principal restrictions
+With principal protection selected, grants cannot reduce assets below cumulative long-term contributions. The retained floor is the greater of that contribution basis and the reserve target; these floors overlap. Losses and permitted costs may still erode principal. Selecting different hypothetical gift terms does not release an actual donor restriction.
+
+Capital-spending comparison only
+An optional comparison uses spending rate × opening annual balance, before that year's donations or return. This is not the proposed interest-only model. It can spend previously accumulated gains and, if gift terms allow, contributed principal. The interface labels this as a comparison, never the default proposal.
+
+Immediate library support
+Immediate-use gifts and their carryover first meet that year's eligible need. Endowment grants then meet remaining need within the policy limits. Excess immediate money keeps its original restrictions; it is never moved into long-term capital. The example assumes all immediate gifts permit these same eligible needs.
+
+Liquidity and uncertainty
+The interest illustration assumes interest is received in cash and available on the annual schedule. Total returns and capital value are separate. Actual instruments, settlement, liquidity, risks, costs and legal requirements need professional review. Money-market-style investing does not establish a guaranteed interest rate or guaranteed principal.
+
+Purchasing power
+Annual need and administration rise with inflation from year 2. Closing purchasing power = closing fund ÷ (1 + inflation)^year, in starting-year dollars. The real contribution benchmark values gifts at their arrival dates. Cumulative support is nominal. Remaining gap = max(0, need − actual support). Reinvestment does not guarantee that the fund keeps pace with inflation.
+
+YEARLY LEDGER — CAD (purchasing power in starting-year dollars)
+Year | Long-term opening | Capital gifts | Gross cash interest | Capital value change | Total return | Costs paid | Net interest | Net interest reinvested | Endowment support | Immediate support | Long-term closing | Purchasing power | Cumulative support | Library need | Remaining gap | Immediate carryover | Unpaid costs
+1 | CA$250,000,000 | CA$0 | CA$7,500,000 | CA$0 | CA$7,500,000 | CA$1,350,000 | CA$6,150,000 | CA$3,075,000 | CA$3,075,000 | CA$0 | CA$253,075,000 | CA$248,112,745 | CA$3,075,000 | CA$5,000,000 | CA$1,925,000 | CA$0 | CA$0
+2 | CA$253,075,000 | CA$0 | CA$7,592,250 | CA$0 | CA$7,592,250 | CA$1,367,375 | CA$6,224,875 | CA$3,112,438 | CA$3,112,438 | CA$0 | CA$256,187,438 | CA$246,239,367 | CA$6,187,438 | CA$5,100,000 | CA$1,987,562 | CA$0 | CA$0
+3 | CA$256,187,438 | CA$0 | CA$7,685,623 | CA$0 | CA$7,685,623 | CA$1,384,977 | CA$6,300,646 | CA$3,150,323 | CA$3,150,323 | CA$0 | CA$259,337,760 | CA$244,379,764 | CA$9,337,760 | CA$5,202,000 | CA$2,051,677 | CA$0 | CA$0
+4 | CA$259,337,760 | CA$0 | CA$7,780,133 | CA$0 | CA$7,780,133 | CA$1,402,810 | CA$6,377,323 | CA$3,188,662 | CA$3,188,662 | CA$0 | CA$262,526,422 | CA$242,533,834 | CA$12,526,422 | CA$5,306,040 | CA$2,117,378 | CA$0 | CA$0
+5 | CA$262,526,422 | CA$0 | CA$7,875,793 | CA$0 | CA$7,875,793 | CA$1,420,875 | CA$6,454,917 | CA$3,227,459 | CA$3,227,459 | CA$0 | CA$265,753,881 | CA$240,701,478 | CA$15,753,881 | CA$5,412,161 | CA$2,184,702 | CA$0 | CA$0
+6 | CA$265,753,881 | CA$0 | CA$7,972,616 | CA$0 | CA$7,972,616 | CA$1,439,177 | CA$6,533,439 | CA$3,266,719 | CA$3,266,719 | CA$0 | CA$269,020,600 | CA$238,882,594 | CA$19,020,600 | CA$5,520,404 | CA$2,253,685 | CA$0 | CA$0
+7 | CA$269,020,600 | CA$0 | CA$8,070,618 | CA$0 | CA$8,070,618 | CA$1,457,719 | CA$6,612,899 | CA$3,306,449 | CA$3,306,449 | CA$0 | CA$272,327,050 | CA$237,077,085 | CA$22,327,050 | CA$5,630,812 | CA$2,324,363 | CA$0 | CA$0
+8 | CA$272,327,050 | CA$0 | CA$8,169,811 | CA$0 | CA$8,169,811 | CA$1,476,504 | CA$6,693,308 | CA$3,346,654 | CA$3,346,654 | CA$0 | CA$275,673,703 | CA$235,284,851 | CA$25,673,703 | CA$5,743,428 | CA$2,396,775 | CA$0 | CA$0
+9 | CA$275,673,703 | CA$0 | CA$8,270,211 | CA$0 | CA$8,270,211 | CA$1,495,534 | CA$6,774,677 | CA$3,387,338 | CA$3,387,338 | CA$0 | CA$279,061,042 | CA$233,505,796 | CA$29,061,042 | CA$5,858,297 | CA$2,470,959 | CA$0 | CA$0
+10 | CA$279,061,042 | CA$0 | CA$8,371,831 | CA$0 | CA$8,371,831 | CA$1,514,814 | CA$6,857,017 | CA$3,428,508 | CA$3,428,508 | CA$0 | CA$282,489,550 | CA$231,739,822 | CA$32,489,550 | CA$5,975,463 | CA$2,546,954 | CA$0 | CA$0
+11 | CA$282,489,550 | CA$0 | CA$8,474,687 | CA$0 | CA$8,474,687 | CA$1,534,347 | CA$6,940,339 | CA$3,470,170 | CA$3,470,170 | CA$0 | CA$285,959,720 | CA$229,986,833 | CA$35,959,720 | CA$6,094,972 | CA$2,624,802 | CA$0 | CA$0
+12 | CA$285,959,720 | CA$0 | CA$8,578,792 | CA$0 | CA$8,578,792 | CA$1,554,136 | CA$7,024,656 | CA$3,512,328 | CA$3,512,328 | CA$0 | CA$289,472,048 | CA$228,246,734 | CA$39,472,048 | CA$6,216,872 | CA$2,704,544 | CA$0 | CA$0
+13 | CA$289,472,048 | CA$0 | CA$8,684,161 | CA$0 | CA$8,684,161 | CA$1,574,184 | CA$7,109,977 | CA$3,554,989 | CA$3,554,989 | CA$0 | CA$293,027,036 | CA$226,519,430 | CA$43,027,036 | CA$6,341,209 | CA$2,786,220 | CA$0 | CA$0
+14 | CA$293,027,036 | CA$0 | CA$8,790,811 | CA$0 | CA$8,790,811 | CA$1,594,496 | CA$7,196,315 | CA$3,598,158 | CA$3,598,158 | CA$0 | CA$296,625,194 | CA$224,804,826 | CA$46,625,194 | CA$6,468,033 | CA$2,869,876 | CA$0 | CA$0
+15 | CA$296,625,194 | CA$0 | CA$8,898,756 | CA$0 | CA$8,898,756 | CA$1,615,074 | CA$7,283,682 | CA$3,641,841 | CA$3,641,841 | CA$0 | CA$300,267,035 | CA$223,102,830 | CA$50,267,035 | CA$6,597,394 | CA$2,955,553 | CA$0 | CA$0
+16 | CA$300,267,035 | CA$0 | CA$9,008,011 | CA$0 | CA$9,008,011 | CA$1,635,922 | CA$7,372,089 | CA$3,686,045 | CA$3,686,045 | CA$0 | CA$303,953,079 | CA$221,413,348 | CA$53,953,079 | CA$6,729,342 | CA$3,043,297 | CA$0 | CA$0
+17 | CA$303,953,079 | CA$0 | CA$9,118,592 | CA$0 | CA$9,118,592 | CA$1,657,044 | CA$7,461,548 | CA$3,730,774 | CA$3,730,774 | CA$0 | CA$307,683,853 | CA$219,736,289 | CA$57,683,853 | CA$6,863,929 | CA$3,133,154 | CA$0 | CA$0
+18 | CA$307,683,853 | CA$0 | CA$9,230,516 | CA$0 | CA$9,230,516 | CA$1,678,443 | CA$7,552,072 | CA$3,776,036 | CA$3,776,036 | CA$0 | CA$311,459,890 | CA$218,071,562 | CA$61,459,890 | CA$7,001,207 | CA$3,225,171 | CA$0 | CA$0
+19 | CA$311,459,890 | CA$0 | CA$9,343,797 | CA$0 | CA$9,343,797 | CA$1,700,124 | CA$7,643,673 | CA$3,821,836 | CA$3,821,836 | CA$0 | CA$315,281,726 | CA$216,419,075 | CA$65,281,726 | CA$7,141,231 | CA$3,319,395 | CA$0 | CA$0
+20 | CA$315,281,726 | CA$0 | CA$9,458,452 | CA$0 | CA$9,458,452 | CA$1,722,090 | CA$7,736,362 | CA$3,868,181 | CA$3,868,181 | CA$0 | CA$319,149,907 | CA$214,778,738 | CA$69,149,907 | CA$7,284,056 | CA$3,415,875 | CA$0 | CA$0
